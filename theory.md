@@ -10,7 +10,7 @@
 ## 1. The Big Picture
 To understand this project, we must first define **electrochemical reduction**. In chemistry, "reduction" simply means gaining electrons.
 
-Most people are familiar with combustion, where we burn a fuel (like carbon or gasoline) with oxygen to release energy. This process produces carbon dioxide ($CO_2$) and water.
+Most people are familiar with combustion, where we burn a fuel (like carbon or gasoline) with oxygen to release energy. This process produces carbon dioxide ($$CO_2$$) and water.
 $$ Fuel + Oxygen \rightarrow CO_2 + H_2O + Energy $$
 
 **Electrochemical CO2 Reduction (CO2R)** is essentially this process in reverse. We use electrical energy to force electrons back into carbon dioxide, converting it from a waste product back into a useful fuel or chemical feedstock.
