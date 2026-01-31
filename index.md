@@ -3,38 +3,41 @@
 </script>
 
 # Electrochemical CO2 Reduction
-**A Beginner-Friendly and Complete Manual for High School Researchers**
+**A practical, beginner-friendly guide for starting research**
 
 ---
 
-## Introduction
-The leap from high school AP/IB Chemistry to actual academic research is often overwhelming. While standard curricula cover redox reactions and stoichiometry, they rarely touch on the complexities of modern electrocatalysis—a field critical for solving the climate crisis.
+## The Motivation
+Transitioning from standard high school chemistry to active research presents a steep learning curve. While AP and IB curricula cover the basics of redox reactions, they rarely address the practicalities of modern electrocatalysis.
 
-**"Artificial Photosynthesis"** (Electrochemical CO2 Reduction) is one of the most promising fields in sustainable energy. It attempts to do what plants do: take carbon dioxide and water, and use energy to convert them into useful chemicals.
+Conversely, academic literature is often written for graduate-level researchers, assuming access to advanced equipment and a deep background in thermodynamics. This leaves a gap for students who have the curiosity to explore "Artificial Photosynthesis" but lack the specific technical guidance to start.
 
-## Why I Wrote This Guide
-When I started exploring this topic, I hit a wall. Academic papers are written for PhDs, often skipping over the "basics" that a student needs to know. Furthermore, the equipment listed in these papers often costs thousands of dollars.
+## Who is this for?
+*   **High School Researchers:** Students looking to conduct independent research projects or science fair entries.
+*   **Beginners:** Anyone with a basic chemistry background attempting their first electrolysis experiments.
+*   **Builders:** Students needing to construct experimental setups (H-cells, electrodes) on a limited budget.
 
-**The goal of this manual is simple:** to translate complex electrochemical theory into a language accessible to high schoolers, and to demonstrate how to perform valid experiments without a university-level budget.
-
-## What You Need to Know
-This guide assumes you have a basic grasp of chemistry (oxidation states, moles, and balancing equations). From there, we will build up to:
-*   **Thermodynamics:** Why CO2 is so stable and hard to break.
-*   **Kinetics:** How catalysts like Copper work to speed up the reaction.
-*   **Engineering:** How to build an "H-Cell" to separate your products.
+## What you will find here
+This site acts as a bridge between textbook theory and laboratory application. It focuses on the specific challenge of reducing Carbon Dioxide ($CO_2$) into useful fuels/chemicals using electricity.
 
 ---
 
-## The Manual
+## Main Index Sections
 
-### [1. The Theory](./theory)
-A breakdown of the reaction mechanisms. We look at the competition between CO2 reduction and Hydrogen evolution, and why the cathode material matters.
+### [1. Foundations & Theory](./theory)
+Bridging the gap between Nernst equations and real-world catalysis. Understanding the reaction mechanisms and the competition with Hydrogen evolution.
 
-### [2. The Build: DIY Setup](./equipment)
-A practical guide to hardware. How to substitute expensive potentiostats for DC power supplies, and how to create salt bridges instead of buying Nafion membranes.
+### [2. Experimental Design](./equipment)
+A guide to the hardware. Specifying the cell architecture (H-Cell vs. Flow Cell), electrode preparation, and cost-effective alternatives for potentiostats and membranes.
 
-### [3. Safety Protocols (Coming Soon)](./)
-**Crucial:** Handling Carbon Monoxide (CO) risks and electrical safety in a wet environment. Do not attempt experiments without reading this.
+### [3. Data Analysis & Interpretation (Coming Soon)](./analysis)
+How to calculate Faradaic Efficiency, measure current density, and interpret Tafel slopes without industrial-grade software.
+
+### [4. Common Problems & Troubleshooting (Coming Soon)](./troubleshooting)
+What to do when the current drops, the membrane clogs, or the results don't make sense.
+
+### [5. Curated Resources (Coming Soon)](./resources)
+A selected list of accessible papers, video lectures, and supplier links for essential materials.
 
 ---
-*Project maintained by [Your Name]*
+*Created by [Your Name]*
