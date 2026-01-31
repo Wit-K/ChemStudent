@@ -8,36 +8,33 @@
 ---
 
 ## The Motivation
-Transitioning from standard high school chemistry to active research presents a steep learning curve. While AP and IB curricula cover the basics of redox reactions, they rarely address the practicalities of modern electrocatalysis.
+Electrochemical CO₂ reduction is widely discussed in research papers, but difficult to approach as a beginner. Most available resources either focus on abstract theory or assume prior experience and complete equipments. As a result, newcomers often struggle to picture and understand how experiments are designed, how data are interpreted and what it actually means.
 
-Conversely, academic literature is often written for graduate-level researchers, assuming access to advanced equipment and a deep background in thermodynamics. This leaves a gap for students who have the curiosity to explore "Artificial Photosynthesis" but lack the specific technical guidance to start.
+This guide aims to bridge that gap. Its goal is to organize concepts, design logic, and data interpretation in a way that is easy to comprehend as beginners, while keeping standard of how the field is in real research.
 
 ## Who is this for?
-*   **High School Researchers:** Students looking to conduct independent research projects or science fair entries.
+*   **Student Researchers:** Students looking to conduct independent research projects or transitioning from theory to experiment.
 *   **Beginners:** Anyone with a basic chemistry background attempting their first electrolysis experiments.
-*   **Builders:** Students needing to construct experimental setups (H-cells, electrodes) on a limited budget.
-
-## What you will find here
-This site acts as a bridge between textbook theory and laboratory application. It focuses on the specific challenge of reducing Carbon Dioxide ($CO_2$) into useful fuels/chemicals using electricity.
+*   **Readers:** Readers who want clear concept map before diving into literature.
 
 ---
 
 ## Main Index Sections
 
 ### [1. Foundations & Theory](./theory)
-Bridging the gap between Nernst equations and real-world catalysis. Understanding the reaction mechanisms and the competition with Hydrogen evolution.
+Key electrochemical concepts explained from the root with intuition and context. Connecting equations to real-world experiments and understanding its reaction mechanisms.
 
 ### [2. Experimental Design](./equipment)
-A guide to the hardware. Specifying the cell architecture (H-Cell vs. Flow Cell), electrode preparation, and cost-effective alternatives for potentiostats and membranes.
+A guide to the hardware. Identifying the correct electrochemical cell, electrode and electrolyte for different experiments.
 
 ### [3. Data Analysis & Interpretation (Coming Soon)](./analysis)
-How to calculate Faradaic Efficiency, measure current density, and interpret Tafel slopes without industrial-grade software.
+How to read typical results, avoid common mistakes, and understand what conclusions can be made.
 
 ### [4. Common Problems & Troubleshooting (Coming Soon)](./troubleshooting)
-What to do when the current drops, the membrane clogs, or the results don't make sense.
+Conceptual and experimental issues beginners frequently encounter, and how to reason through them.
 
 ### [5. Curated Resources (Coming Soon)](./resources)
-A selected list of accessible papers, video lectures, and supplier links for essential materials.
+Papers, textbooks, and reviews annotated with guidance on how to approach them as a beginner.
 
 ---
-*Created by [Your Name]*
+*Created by [Wit Kulvutiroj]*
