@@ -102,21 +102,21 @@ Not all metals act the same and they can often be categorized into three groups 
 ### Group 1: Hydrogen Producers
 Metals: **Platinum (Pt), Nickel (Ni), Iron (Fe), Titanium (Ti)** and more.
 *   **Behavior:** These metals bind to Hydrogen atoms very strongly.
-*   **Typical Products:** If you use these as a cathode, you will produce mostly Hydrogen gas. The CO2 will barely touch the surface.
-*   **:** Do not use these for the working electrode.
+*   **Typical Products:** Mostly Hydrogen gas. The CO2 will barely touch the surface.
+*   **Comment:** Do not use these for the catalyst if you are doing CO2 reduction.
 
 ### Group 2: Two-Electron Pathway (CO / Formate)
 Metals: **Silver (Ag), Gold (Au), Zinc (Zn), Tin (Sn)** and more.
 *   **Behavior:** These metals are poor at making hydrogen, allowing CO2 to react. However, they stop the reaction early and separate from the reaction site.
-*   **Typical Products:** They produce Carbon Monoxide (CO) or Formate (HCOO-).
-*   **Verdict:** Great for beginners. Zinc is cheap and makes Formate; Silver is expensive but makes CO efficiently.
+*   **Typical Products:** Carbon Monoxide (CO) or Formate (HCOO-).
+*   **Comment:** Great for beginners. Zinc is cheap and makes Formate; Silver is expensive but makes CO efficiently.
 
 ### Group 3: Hydrocarbon Pathway
 Metal: **Copper (Cu)**
 is unique in the periodic table. It is the only metal known to make multi-carbon products (very valuable).
-*   **Behavior:** Copper has just the right binding energy to hold onto the Carbon atom, allowing it to bond with other Carbon atoms.
-*   **Result:** It can produce Methane ($CH_4$), Ethylene ($C_2H_4$), and Ethanol ($C_2H_5OH$).
-*   **Verdict:** The "Holy Grail" of research. However, it is complex because it produces a mix of many different liquids and gases at once.
+*   **Behavior:** Copper has just the right binding energy with the Carbon atom. This allows the carbon atoms to bond with other Carbon atoms without dettaching from the surface of the metal first.
+*   **Typical Products:** Methane ($CH_4$), Ethylene ($C_2H_4$), and Ethanol ($C_2H_5OH$).
+*   **Comment:** The Holy Grail and the hottest metal in this field. However, it is complex as it produces mix different liquids and gases at once and can be somewhat unpredictable.
 
 ---
 
