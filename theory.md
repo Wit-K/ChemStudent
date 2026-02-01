@@ -44,25 +44,52 @@ This is the liquid solution between the two electrodes. Because pure water does 
 
 ---
 
-## 3. The Metrics: Potential, Current, and Density
-In a physics class, you learn $V=IR$. In electrochemistry, these terms have specific physical meanings regarding the reaction.
+## 3. Understanding the Variables
+In an electrochemical experiment, there are two main parameters we can alter or measure: Potential and Current. It is vital to understand the difference between the driving force and the reaction rate.
 
-### Potential (Voltage) = The "Push"
-Potential, measured in Volts (V), is the driving force you apply to the system.
-*   Every reaction requires a minimum voltage to start (Thermodynamic Potential).
-*   If you apply -0.5V, the electrons might not have enough energy to break the $CO_2$ molecule.
-*   If you apply -2.0V, you are pushing harder, which usually makes the reaction faster but might also trigger unwanted side reactions (like splitting water into hydrogen).
+### Potential (Voltage)
+Potential is the energy or basically, the push applied to the system. Every chemical reaction has its own minimum energy requirement to proceed.
+*   **Thermodynamic Potential:** This is the theoretical minimum voltage needed to start the reaction. For converting CO2 to Carbon Monoxide, this is approximately -0.11 Volts.
+*   **Applied Potential:** In the lab, you must apply significantly more voltage than the theoretical value to get the intended result. This is because real-world electrochemical reactions are hardly perfectly efficient and requires additional energy to overcome the theroretical minimum. That difference between what you apply and what is theoretically needed is called "Overpotential".
 
-### Current (Amperage) = The "Rate"
-Current, measured in Amperes (A), counts how many electrons are flowing through the wire per second.
-*   Since the chemical reaction requires electrons (e.g., 2 electrons to convert one $CO_2$ to $CO$), the current tells you exactly how fast the reaction is occurring.
-*   **High Current = High Reaction Rate.**
+### Current (Amperage)
+While voltage is the push, the current is the flow. Current measures the rate at which electrons are moving across the interface.
+*   Since the chemical reaction consumes electrons, the current tells you directly how fast the reaction is happening.
+*   **High Current:** A fast reaction rate.
+*   **Low Current:** A slow reaction rate.
 
-### Current Density (The Standard Metric)
-This is the most important concept for comparing results.
-If Researcher A uses a massive sheet of copper, they will get a high current just because the surface is big. If Researcher B uses a tiny wire, they get a low current.
+### Surface Area and Normalization
+A large piece of copper will naturally allow more current to pass than a thin copper wire, just because there is more space for the reaction to occur. This makes comparision unfair. So, to make fair comparisons between different experiments, we wil look at **Current Density** instead. This is the ratio of current by surface area of the electrode telling us how active the material is regardless of its size.
 
-To compare them fairly, we divide the current by the surface area of the electrode.
-$$ Current Density (j) = \frac{Current (mA)}{Area (cm^2)} $$
-*   **Unit:** $mA/cm^2$
-*   **Usage:** In your experiments, you will always report current density, not just raw current. This allows you to compare your efficiency directly with papers published by universities.
+---
+
+## 4. Thermodynamics and Kinetics
+A common confusion for beginners is why the reaction does not start exactly at the theoretical voltage.
+
+### The Energy Barrier
+Even if you apply enough energy to make the reaction possible (Thermodynamics), the reaction might still be too slow to measure. This is because molecules need to rearrange themselves, bonds need to break, and intermediates need to form.
+
+### Overpotential
+To overcome this slowness, we apply extra voltage. This extra voltage is the **Overpotential**.
+*   If a catalyst is "good," it requires very little overpotential to reach a high current.
+*   If a catalyst is "bad," you must apply a massive voltage to get even a small current.
+
+In your research, your goal is often to find a setup that produces the most product with the least amount of overpotential (energy waste).
+
+---
+
+## 5. Selectivity and The Main Challenge
+The most difficult part of CO2 reduction is not breaking the CO2; it is avoiding the water.
+
+### The Hydrogen Problem
+Since our electrolyte is mostly water, there are billions of water molecules surrounding the electrode for every one CO2 molecule. Water can also accept electrons to form Hydrogen gas ($H_2$).
+$$ 2H^+ + 2e^- \rightarrow H_2 $$
+
+This is called the **Hydrogen Evolution Reaction (HER)**. It is a parasitic reaction that wastes your electricity.
+
+### Selectivity (Faradaic Efficiency)
+We measure success using **Faradaic Efficiency (FE)**. This represents the percentage of electrons that went into making the product you wanted (like CO) versus the product you didn't want (like Hydrogen).
+*   **100% FE:** Every electron resulted in CO2 reduction.
+*   **0% FE:** All electrons were wasted making Hydrogen gas.
+
+The choice of metal for your cathode dictates this selectivity. Some metals (like Platinum) are excellent at making Hydrogen, which makes them terrible for CO2 reduction. Other metals (like Copper, Gold, or Silver) are poor at making Hydrogen, allowing the CO2 reduction to compete effectively.
