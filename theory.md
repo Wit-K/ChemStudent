@@ -66,15 +66,15 @@ A large piece of copper will naturally allow more current to pass than a thin co
 Before diving deeper into the more complex part of the CO2 reduction, let's clear up some confusion you may have.
 
 **1. Where does the Hydrogen come from?**
-You will notice the equations have $H^+$ in them.
+You will notice the equations have $$H^+$$ in them.
 $$ CO_2 + 2H^+ + 2e^- \rightarrow CO + H_2O $$
-But if we are only pumping in $CO_2$ gas, where is the $H$ even coming from?
-*   **The Answer:** It comes from the water ($H_2O$) or the Bicarbonate ($HCO_3^-$) in the electrolyte. This is why the reaction must happen in a water-based solution. The electricity splits the water and provide the protons needed to form the coumpounds.
+But if we are only pumping in $$CO_2$$ gas, where is the $$H^+$$ even coming from?
+*   **The Answer:** It comes from the water ($$H_2O$$) or the Bicarbonate ($$HCO_3^-$$) in the electrolyte. This is why the reaction must happen in a water-based solution. The electricity splits the water and provide the protons needed to form the coumpounds.
 
 **2. What does the product look like?**
 When we say "Fuel," don't expect liquid gasoline or diesel to drip right off the electrode.
-*   **Gas Products:** Carbon Monoxide ($CO$), Methane ($CH_4$), and Ethylene ($C_2H_4$) will appear as bubbles mixing with the unreacted $CO_2$ bubbles.
-*   **Liquid Products:** Formate ($HCOO^-$) and Ethanol ($C_2H_5OH$) will dissolve into the water. You won't be able to distinguishes them from water. You will have to test the liquid later to find out the what actually comes out.
+*   **Gas Products:** Carbon Monoxide (CO), Methane ($$CH_4$$), and Ethylene ($$C_2H_4$$) will appear as bubbles mixing with the unreacted $$CO_2$$ bubbles.
+*   **Liquid Products:** Formate ($$HCOO^-$$) and Ethanol ($$C_2H_5OH$$) will dissolve into the water. You won't be able to distinguishes them from water. You will have to test the liquid later to find out the what actually comes out.
 
 ---
 
@@ -114,7 +114,7 @@ We measure the efficiency using "Faradaic Efficiency (FE)". It represents the pe
 You might wonder: If we are applying electricity, why doesn't the CO2 just break apart on its own?
 
 ### The Stability Problem
-Carbon Dioxide is an incredibly stable molecule: it has a linear shape ($O=C=O$) with strong double bonds. It is already happy as is and resist changes coming in its way. So if you just stick a wire in water and apply voltage, don't expect long chain carbon compound to form; the electricity will ignore CO2 and just split water, which is easy to break apart, instead.
+Carbon Dioxide is an incredibly stable molecule: it has a linear shape ($$O=C=O$$) with strong double bonds. It is already happy as is and resist changes coming in its way. So if you just stick a wire in water and apply voltage, don't expect long chain carbon compound to form; the electricity will ignore CO2 and just split water, which is easy to break apart, instead.
 
 ### What the Catalyst Does
 This is where the metal electrode comes into play. The reaction does not happen in the liquid; it happens on the surface of the metal.
