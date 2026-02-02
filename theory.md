@@ -73,8 +73,8 @@ But if we are only pumping in $CO_2$ gas, where is the $H$ even coming from?
 
 **2. What does the product look like?**
 When we say "Fuel," don't expect liquid gasoline or diesel to drip right off the electrode.
-*   **Gas Products:** Carbon Monoxide ($CO$), Methane ($CH_4$), and Ethylene ($C_2H_4$) will appear as **bubbles** mixing with the unreacted $CO_2$ bubbles.
-*   **Liquid Products:** Formate ($HCOO^-$) and Ethanol ($C_2H_5OH$) will **dissolve** into the water. You won't be able to distinguishes them from water. You will have to test the liquid later to find out the what actually comes out.
+*   **Gas Products:** Carbon Monoxide ($CO$), Methane ($CH_4$), and Ethylene ($C_2H_4$) will appear as bubbles mixing with the unreacted $CO_2$ bubbles.
+*   **Liquid Products:** Formate ($HCOO^-$) and Ethanol ($C_2H_5OH$) will dissolve into the water. You won't be able to distinguishes them from water. You will have to test the liquid later to find out the what actually comes out.
 
 ---
 
@@ -85,7 +85,7 @@ A common questions from beginners is why the reaction does not start exactly at 
 Even if you apply enough energy to make the reaction possible, the reaction might still be too slow to measure. This is because molecules need to rearrange themselves, bonds need to break, and intermediates need to form.
 
 ### Overpotential
-To overcome this slowness, we apply extra voltage. This extra voltage is the **Overpotential**.
+To overcome this slowness, we apply extra voltage. This extra voltage is the "Overpotential".
 *   If a catalyst is "good," it requires very little overpotential to reach a high current.
 *   If a catalyst is "bad," you must apply a massive voltage to get even a small current.
 
@@ -145,13 +145,13 @@ Do not use these metals if you are aiming for CO2 reduction.
 Metals: **Silver (Ag), Gold (Au), Zinc (Zn), Tin (Sn)** and more.
 They are great for beginners; however, different metals are specialized in making different product, so research first on what products you are looking for. For example, Zinc makes Formate and Silver makes CO efficiently.
 *   **Behavior:** These metals are poor at making hydrogen, allowing CO2 to react. However, they stop the reaction early and separate from the reaction site.
-*   **Typical Products:** Carbon Monoxide (CO) or Formate (HCOO-).
+*   **Typical Products:** **Carbon Monoxide (CO)** or **Formate (HCOO-)**.
 
 ### Group 3: Hydrocarbon Pathway
 Metal: **Copper (Cu)**
 It is unique in the periodic table and the only metal known to make multi-carbon products (very valuable). However, it is complex as it produces a mix of different products' state at once and can be somewhat unpredictable. Scientist are trying to tune the metal and understand mechanism of how each product forms in different environment.
 *   **Behavior:** Copper has just the right binding energy with the Carbon atom. This allows the carbon atoms to bond with other Carbon atoms without dettaching from the surface of the metal first.
-*   **Typical Products:** Methane ($CH_4$), Ethylene ($C_2H_4$), and Ethanol ($C_2H_5OH$).
+*   **Typical Products:** **Methane ($$CH_4$$)**, **Ethylene ($$C_2H_4$$)**, and **Ethanol ($$C_2H_5OH$$)**.
 
 ---
 
