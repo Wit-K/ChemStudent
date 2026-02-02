@@ -123,11 +123,11 @@ This is where the metal electrode comes into play. The reaction does not happen 
 3.  **Formation:** The electron attack the reactants, breaking them apart. The atoms then combine with each other, forming new molecules which is our product.
 4.  **Desorption:** Once the fuel is made, the metal must let go so the product can float away and make room for more CO2.
 
-### The "Goldilocks" Zone (The Sabatier Principle)
-This is the heart of modern research. Scientists are constantly trying to find or design a material that is "just right."
-*   **Too Weak:** If the metal doesn't grab the CO2 strongly enough, the reaction never starts (Hydrogen wins).
-*   **Too Strong:** If the metal grabs too tight, the CO2 gets stuck (poisoned). The surface gets clogged, and the reaction stops.
-*   **Just Right:** The metal holds CO2 long enough to break it, but lets go of the product immediately.
+### The "Goldilocks" Zone
+This is the heart of modern research. Scientists are trying to find or design a material that is just right.
+*   **Too Weak:** If the metal doesn't hold onto the CO2 strongly enough, the reaction never starts and all was there is Hydrogen.
+*   **Too Strong:** If the metal grabs too tight, the CO2 gets stuck. The surface gets clogged, and the reaction stops. This is the term define as "surface poisoning".
+*   **Just Right:** The metal holds onto CO2 long enough to break it, but lets go of after the product form.
 The goal of the research is to find a catalyst surface that has this perfect balance.
 
 ---
