@@ -24,16 +24,16 @@ Because $$CO_2$$ is an extremely stable molecule, it does not want to react. It 
 ## 2. Basic Electrochemistry
 Experiments in this field take place inside an "electrolytic cell". Unlike a battery (which creates electricity from chemicals), an electrolytic cell uses an external power source to force non-spontaneous chemical reactions to happen.
 
-Here are the three critical components of the system:
+The three critical components of the system include:
 
 ### The Cathode (The Reduction Site)
-The cathode is the electrode connected to the negative terminal of your power supply. This is where the electrons enter the solution.
+The cathode is the "electrode" connected to the negative terminal of the power supply. This is where electrons enter the solution.
 *   **What happens here:** Positive ions or neutral molecules (like $$CO_2$$) are attracted to the surface. They accept electrons and undergo reduction.
 *   **Function:** This is the most important part of the setup. The material of the cathode determines what product you make. Researchers are working together to create better cathode which makes better product.
 *   **Key Equation:** $$ CO_2 + 2H^+ + 2e^- \rightarrow CO + H_2O $$
 
 ### The Anode (The Oxidation Site)
-The anode is the electrode connected to the positive terminal. This is where electrons leave the solution to return to the power supply.
+The anode is the "electrode" connected to the positive terminal. This is where electrons leave the solution to return to the power supply.
 *   **What happens here:** To balance the electrons used at the cathode, something must lose electrons (oxidize) at the anode. In most experiments, water is oxidized into oxygen gas.
 *   **Function:** While we focus on what is happening on the cathode, the anode is necessary to complete the circuit.
 *   **Key Equation:** $$ 2H_2O \rightarrow O_2 + 4H^+ + 4e^- $$
@@ -44,7 +44,7 @@ This is the liquid solution between the two electrodes. Because pure water does 
 
 ---
 
-## 3. Understanding the Variables
+## 3. Understanding Measurements and Variables
 In an electrochemical experiment, there are two main parameters we can alter or measure: Potential and Current. It is vital to understand the difference between the driving force and the reaction rate.
 
 ### Potential (Voltage)
@@ -62,7 +62,23 @@ A large piece of copper will naturally allow more current to pass than a thin co
 
 ---
 
-## 4. Thermodynamics and Kinetics
+## 4. Common Misconception
+Before diving deeper into the more complex part of the CO2 reduction, let's clear up some confusion you may have.
+
+**1. Where does the Hydrogen come from?**
+You will notice the equations have $H^+$ in them.
+$$ CO_2 + 2H^+ + 2e^- \rightarrow CO + H_2O $$
+But if we are only pumping in $CO_2$ gas, where is the $H$ even coming from?
+*   **The Answer:** It comes from the water ($H_2O$) or the Bicarbonate ($HCO_3^-$) in the electrolyte. This is why the reaction must happen in a water-based solution. The electricity splits the water and provide the protons needed to form the coumpounds.
+
+**2. What does the product look like?**
+When we say "Fuel," don't expect liquid gasoline or diesel to drip right off the electrode.
+*   **Gas Products:** Carbon Monoxide ($CO$), Methane ($CH_4$), and Ethylene ($C_2H_4$) will appear as **bubbles** mixing with the unreacted $CO_2$ bubbles.
+*   **Liquid Products:** Formate ($HCOO^-$) and Ethanol ($C_2H_5OH$) will **dissolve** into the water. You won't be able to distinguishes them from water. You will have to test the liquid later to find out the what actually comes out.
+
+---
+
+## 5. Thermodynamics and Kinetics
 A common questions from beginners is why the reaction does not start exactly at the theoretical voltage.
 
 ### The Energy Barrier
@@ -77,7 +93,7 @@ In research, the goal is often to find a setup that produces the most product wi
 
 ---
 
-## 5. Selectivity and The Main Challenge
+## 6. Selectivity and the Competing Reaction
 The most difficult part of CO2 reduction is not breaking the CO2; it is avoiding the water.
 
 ### The Hydrogen Problem
@@ -92,40 +108,58 @@ We measure the efficiency using "Faradaic Efficiency (FE)". It represents the pe
 *   **50% FE:** Half of the electron resulted in $$CO_2$$ reduction.
 *   **0% FE:** All electrons were wasted making Hydrogen gas.
 
-The choice of metal in the cathode determines this selectivity. Some metals are excellent at making Hydrogen, which makes them terrible for CO2 reduction. While others are poor at making Hydrogen, allowing the CO2 reduction to compete and have a chance against HER.
+---
+
+## 7. The Core Idea
+You might wonder: If we are applying electricity, why doesn't the CO2 just break apart on its own?
+
+### The Stability Problem
+Carbon Dioxide is an incredibly stable molecule: it has a linear shape ($O=C=O$) with strong double bonds. It is already happy as is and resist changes coming in its way. So if you just stick a wire in water and apply voltage, don't expect long chain carbon compound to form; the electricity will ignore CO2 and just split water, which is easy to break apart, instead.
+
+### What the Catalyst Does
+This is where the metal electrode comes into play. The reaction does not happen in the liquid; it happens on the surface of the metal.
+1.  **Adsorption:** The CO2 molecule lands on the metal surface.
+2.  **Activation:** The metal atoms grab the Carbon and Oxygen, physically bending the molecule. This bending weakens the bonds, making it easier for electrons to attack.
+3.  **Formation:** The electron attack the reactants, breaking them apart. The atoms then combine with each other, forming new molecules which is our product.
+4.  **Desorption:** Once the fuel is made, the metal must let go so the product can float away and make room for more CO2.
+
+### The "Goldilocks" Zone (The Sabatier Principle)
+This is the heart of modern research. Scientists are constantly trying to find or design a material that is "just right."
+*   **Too Weak:** If the metal doesn't grab the CO2 strongly enough, the reaction never starts (Hydrogen wins).
+*   **Too Strong:** If the metal grabs too tight, the CO2 gets stuck (poisoned). The surface gets clogged, and the reaction stops.
+*   **Just Right:** The metal holds CO2 long enough to break it, but lets go of the product immediately.
+The goal of the research is to find a catalyst surface that has this perfect balance.
 
 ---
 
-## 6. Catalyst Materials
+## 8. Catalyst materials
 Not all metals act the same and they can often be categorized into three groups based on what they produce when applied electricity:
 
 ### Group 1: Hydrogen Producers
 Metals: **Platinum (Pt), Nickel (Ni), Iron (Fe), Titanium (Ti)** and more.
+Do not use these metals if you are aiming for CO2 reduction.
 *   **Behavior:** These metals bind to Hydrogen atoms very strongly.
 *   **Typical Products:** Mostly Hydrogen gas. The CO2 will barely touch the surface.
-*   **Comment:** Do not use these for the catalyst if you are doing CO2 reduction.
 
 ### Group 2: Two-Electron Pathway (CO / Formate)
 Metals: **Silver (Ag), Gold (Au), Zinc (Zn), Tin (Sn)** and more.
+They are great for beginners; however, different metals are specialized in making different product, so research first on what products you are looking for. For example, Zinc makes Formate and Silver makes CO efficiently.
 *   **Behavior:** These metals are poor at making hydrogen, allowing CO2 to react. However, they stop the reaction early and separate from the reaction site.
 *   **Typical Products:** Carbon Monoxide (CO) or Formate (HCOO-).
-*   **Comment:** Great for beginners. Zinc is cheap and makes Formate; Silver is expensive but makes CO efficiently.
 
 ### Group 3: Hydrocarbon Pathway
 Metal: **Copper (Cu)**
-is unique in the periodic table. It is the only metal known to make multi-carbon products (very valuable).
+It is unique in the periodic table and the only metal known to make multi-carbon products (very valuable). However, it is complex as it produces a mix of different products' state at once and can be somewhat unpredictable. Scientist are trying to tune the metal and understand mechanism of how each product forms in different environment.
 *   **Behavior:** Copper has just the right binding energy with the Carbon atom. This allows the carbon atoms to bond with other Carbon atoms without dettaching from the surface of the metal first.
 *   **Typical Products:** Methane ($CH_4$), Ethylene ($C_2H_4$), and Ethanol ($C_2H_5OH$).
-*   **Comment:** The Holy Grail and the hottest metal in this field. However, it is complex as it produces mix different liquids and gases at once and can be somewhat unpredictable.
 
 ---
 
-## 7. The Physical Limit: Solubility
-Finally, we must understand the environment. CO2 is a gas, but the reaction happens on the solid metal surface inside a liquid.
+## 9. The Physical Limit
+Finally, we must understand the environment and its limit in real-world. CO2 is a gas, but the reaction happens on the solid metal surface inside a liquid.
 
 For the reaction to work, CO2 gas must dissolve into the water to reach the electrode.
-1.  **Solubility:** CO2 does not dissolve well in water (approx. 33mM concentration at room temperature).
-2.  **Mass Transport:** As you run the reaction, you use up the CO2 near the metal surface. If new CO2 cannot diffuse in fast enough, the reaction starves, and Hydrogen evolution takes over.
+1.  **Solubility:** CO2 does not dissolve well in water: just around 33mM concentration at room temperature.
+2.  **Mass Transport:** As you run the reaction, you use up the CO2 near the metal surface. If new CO2 cannot diffuse in fast enough, the reaction stops and Hydrogen evolution takes over instead.
 
-**Practical Implication:**
-This is why you will see instructions to "bubble" CO2 gas continuously into the solution. It ensures the water stays saturated with CO2, giving the reaction the best chance to succeed.
+This is why you will see instructions to bubble CO2 gas continuously into the solution. It keeps the water saturated with CO2, giving enough room for valuable reactions to happen. 
