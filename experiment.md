@@ -23,7 +23,7 @@ If you put everything in one beaker, the oxygen produced in Anodic Chamber would
 
 ---
 
-## 2. Anatomy of an H-Cell System
+## 2. Simple Anatomy of an H-Cell System
 Even though there are many different H-Cells from various manufacturer, most of them consists of 5 main components. Understanding their roles are necessary for designing a valid experiment.
 
 ### The Core Components in Simple Term
@@ -33,39 +33,39 @@ Even though there are many different H-Cells from various manufacturer, most of 
 4.  **The Membrane:** A selective barrier that isolates the two chambers.
 5.  **The Electrolyte:** The ionic solution that allows charge transfer.
 
-### System Configuration: 2-Electrode vs. 3-Electrode
-One of the first design choices a researcher makes is how to control the voltage.
-
-**A. The 2-Electrode Configuration**
-In this setup, a potential difference is applied directly between the Anode and Cathode.
-*   **Measurement:** Measures the total cell voltage.
-*   **Limitation:** It measures the sum of all resistance in the cell (wires, electrolyte, membrane). It is difficult to distinguish how much energy is being used for the reaction versus how much is lost to resistance.
-*   **Context:** Common in industrial bulk electrolysis where precision regarding specific surface potentials is less critical than total power consumption.
-
-**B. The 3-Electrode Configuration (The Academic Standard)**
-This setup introduces a Reference Electrode placed near the Working Electrode.
-*   **Measurement:** The potentiostat measures the voltage difference between the *Working Electrode* and the *Reference Electrode*, while passing current between the *Working* and *Counter* electrodes.
-*   **Advantage:** This isolates the Working Electrode, essentially ignoring the resistance of the rest of the cell.
-*   **Context:** This is the standard for published research as it allows for precise reporting of thermodynamic data ($V$ vs. $RHE$).
+All of these are crucial components in "three electrode system" commonly used in H-cell electrochemical experiments. It is called three electrode system as to its three electrode, which includes reference electrode that distinguishes it from the normal two electrode system studied in high school. 
 
 ---
 
 ## 3. The Working Electrode (WE)
-The Working Electrode (Cathode) is the centerpiece of the experiment. It is the only component where the specific material selection dictates the chemical product.
+The Working Electrode (Cathode) is the centerpiece of the experiment. It serves as the electron donor and the active site where the reduction reaction occurs.
 
-### Function
-The WE acts as the electron donor. In an H-Cell, it is submerged in the cathodic chamber, which is continuously purged with CO2 gas.
+### Role & Significance
+Connected to the negative terminal, most of the time, the Working Electrode is the catalyst. In electrochemistry, the material of the electrode dictates the entire reaction pathway. The specific atomic arrangement on the surface determines whether $CO_2$ is converted into Carbon Monoxide, Methane, or just Hydrogen gas. Therefore, the choice of the Working Electrode is the primary variable in any CO2 reduction study.
 
-### Material Selection Criteria
-Researchers select materials based on the "Product Selectivity" map established in literature:
-*   **Copper (Cu):** Currently the only bulk metal capable of catalyzing substantial Carbon-Carbon coupling to form hydrocarbons (Ethylene, Ethanol, Methane).
-*   **Au, Ag, Zn (Gold, Silver, Zinc):** These metals typically terminate the reaction early, producing Carbon Monoxide (CO) or Formate.
-*   **Carbon/Graphite:** often used as a baseline or support structure, but generally poor for direct CO2 reduction activity.
+### Key Properties That Affect Results
+1.  **Surface Composition:** The purity of the metal is critical. Even trace impurities can alter the product distribution.
+2.  **Surface Morphology:** The roughness or nano-structure of the surface changes the local environment and the availability of reaction sites, often influencing the efficiency of the reaction.
+3.  **Pretreatment and Modification:** There are multiples available modification of the metal before running the experiment. This affects the reaction widely and often change what product are produced. For example, oxidizing copper before using it as a catalyst could help increase its surface area and integrating copper nano particles onto support might enable it to make methane instead of ethanol.
 
-### Surface Pretreatment Principles
-The surface state of the metal significantly impacts data reproducibility. A "fresh" sample from a supplier often contains surface oxides or organic contaminants that can block active sites. Standard laboratory protocols usually involve a pretreatment phase:
-*   **Mechanical Polishing:** Using successively finer abrasives to create a uniform surface area.
-*   **Chemical Etching:** Using dilute acids to strip native oxide layers immediately prior to testing.
-*   **Electropolishing:** Using a high current in a specific solution to microscopically smooth the surface.
+### Common Choices in Research
+*   **Copper (Cu):** The most significant material in the field, as it is the only bulk metal capable of efficiently producing hydrocarbons (Ethylene, Ethanol).
+*   **Gold (Au), Silver (Ag), Zinc (Zn):** Materials commonly used to produce Carbon Monoxide (CO).
+*   **Tin (Sn), Bismuth (Bi):** Materials often selected for Formate production.
 
-*Note: The specific pretreatment method is often detailed in the "Experimental Methods" section of the papers you choose to reference.*
+---
+
+## 4. The Counter Electrode (CE)
+The Counter Electrode (Anode) completes the electrical circuit. While the focus of the experiment is on the cathode, the anode is equally necessary for the system to function.
+
+### Role & Significance
+Connected to the positive terminal, the Counter Electrode balances the reaction. For every electron consumed by the $CO_2$ reduction at the cathode, an oxidation reaction must occur here (typically splitting water into Oxygen). Crucially, the Counter Electrode must be "inert." If it degrades or dissolves during the experiment, metal ions can migrate across the cell and contaminate the Working Electrode, rendering the data invalid.
+
+### Key Properties That Affect Results
+1.  **Chemical Inertness:** The material must withstand high oxidation potentials without corroding.
+2.  **Surface Area:** To ensure the Counter Electrode does not become a bottleneck, researchers typically ensure its surface area is significantly larger than that of the Working Electrode.
+
+### Common Choices in Research
+*   **Platinum (Pt):** The academic standard due to its exceptional stability and conductivity, usually in the form of a wire or mesh.
+*   **Graphite/Carbon:** A cost-effective alternative often used in educational settings, though it requires monitoring for degradation over long-term experiments.
+*   **Dimensionally Stable Anodes (DSA):** Industrial-grade oxides (like Iridium Oxide) designed for high-current durability.
