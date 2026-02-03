@@ -142,3 +142,62 @@ LSV and CV only last a few seconds. To measure products, you need to run the rea
     *   **Declining Line:** The catalyst is unstable (e.g. being poisoned or falling off).
 
 ---
+
+## 6. Phase 5: Product Detection
+*The "Black Box" Problem*
+
+The most common question beginners ask is: "My machine says 50mA of current. How much Methane did I make?"
+The answer is: the machine doesn't know and the current only counts electrons. It doesn't know if those electrons made Methane, Carbon Monoxide, or just Hydrogen. To find the moles for your efficiency calculation, you need a separate detection method. To find the moles for the efficiency calculation, you must analyze both the gas coming out of the cell and the liquid electrolyte inside the cell.
+
+### A. The Professional Standards
+If you read a paper in *Nature* or *Science*, they use separate instruments for each phase.
+
+**1. For Gas Products (e.g. $CO, CH_4, H_2, C_2H_4$):**
+*   **Instrument:** **Gas Chromatography (GC)**.
+*   **How it works:** Use a syringe to take gas from the head space after running CA; then, inject the gas stream into a long column. Different gases move at different speeds, so the detector detects them at different time disinguising the gases.
+*   **Result:** Peaks showing how many micromoles of each gas were created.
+
+**2. For Liquid Products (e.g. Formate, Ethanol, Propanol):**
+*   **Instrument:** **Nuclear Magnetic Resonance (NMR)** or **High-Performance Liquid Chromatography (HPLC)**.
+*   **How it works:** You take a small sample of your electrolyte water after the experiment.
+    *   *NMR:* Uses magnetic fields to identify specific carbon-hydrogen bonds (e.g., distinguishing the $CH_3$ group in Ethanol from the $H-C$ bond in Formate).
+    *   *HPLC:* Separates chemical compounds in the liquid based on how they stick to a filter column.
+*   **Result:** A concentration reading of the compounds found in the solution
+
+### B. The Student "Hacks" (Alternative Detection)
+If you cannot access a \$50,000 GC or NMR, you have alternatives.
+
+**1. Liquid Products: Titration**
+If you are using a Zinc or Tin catalyst (which primarily makes Formate/Formic Acid), the product stays in the water.
+*   **Method:** Simple chemical titration (e.g., Potassium Permanganate oxidation) can determine the concentration of organics in your electrolyte.
+*   **Result:** Gives you the total moles of liquid product ($n$).
+
+**2. Gas Products: Volume Displacement**
+*   **Method:** Connect the exhaust of your cell to an inverted graduated cylinder filled with water. As gas is produced, it pushes the water out.
+*   **Result:** This gives you the **Total Volume** of gas produced.
+*   **Limitation:** It doesn't tell you *which* gas it is (CO vs H2), but it allows you to calculate the "Total Gas Efficiency."
+
+**3. Specific Sensors**
+*   **Method:** Low-cost Arduino sensors (like the MQ-7) can detect Carbon Monoxide specifically.
+*   **Result:** A rough ppm (parts per million) reading to prove you made CO and not just Hydrogen.
+
+---
+
+## 7. Conclusion: The Recommended Workflow
+Data analysis is not something you do at the end; it dictates how you run the experiment. Here is the step-by-step flow for a successful study:
+
+1.  **Measure Dimensions:** Before starting, measure the **Surface Area ($cm^2$)** of your working electrode.
+2.  **Diagnostic Check (CV):** Run a **Cyclic Voltammetry** scan to see if the electrode is clean (check for oxidation peaks).
+3.  **Performance Check (LSV):** Run a **Linear Sweep** to find the "Onset Potential" (at what voltage does the current start rising?).
+4.  **Production Run (Chronoamperometry):** Pick a voltage (e.g., -1.0V) and hold it for 60 minutes.
+    *   *Action:* During this hour, collect gas samples (if using GC) or wait to sample the liquid (if analyzing liquids).
+5.  **The Math:**
+    *   Take the average Current ($I$) from Step 4.
+    *   Divide by Area to get **Current Density ($j$)**.
+    *   Quantify product moles ($n$) using your detection method.
+    *   Calculate **Faradaic Efficiency ($FE$)**.
+6.  **Report:**
+    *   Present the **Current Density** graph to show Activity (Speed).
+    *   Present the **FE** bar chart to show Selectivity (Product Purity).
+  
+
