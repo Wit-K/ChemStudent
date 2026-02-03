@@ -88,19 +88,85 @@ The Reference Electrode provides a stable, known voltage against which the Worki
 
 ---
 
-## 6. The Membrane (Separator)
-The Membrane is the physical barrier located inside the "bridge" of the H-Cell, separating the Cathodic chamber from the Anodic chamber.
+## 6. The Membrane
+The Selective Barrier
 
 ### Role & Significance
-The membrane serves two opposing functions: it must block chemicals but allow electricity.
-1.  **Isolation:** It prevents the Oxygen gas produced at the Anode from migrating to the Cathode (which would ruin the reduction reaction).
-2.  **Conduction:** It must allow ions (charged particles like $H^+$ or $K^+$) to pass through freely to complete the circuit. If the membrane is too restrictive, the electrical resistance increases, and the cell heats up.
+The Membrane is the physical barrier located inside the bridge of the H-Cell, separating the Cathodic chamber from the Anodic chamber. The membrane serves two key functions: it must block chemicals while allowing electricity to flow.
+1.  **Isolation:** It prevents gases produced at the Anode from migrating to the Cathode which, otherwise, would have ruined the reaction.
+2.  **Conduction:** It must allow ions to pass through freely to complete the circuit. If the membrane is restrictive, the electrical resistance increases, and the cell heats up.
 
 ### Key Properties That Affect Results
-1.  **Ionic Conductivity:** How easily ions flow through. High resistance leads to a large voltage drop (IR drop) across the cell.
+1.  **Ionic Conductivity:** How easily ions flow through. High resistance leads to a large voltage drop, called "IR drop", across the cell.
 2.  **Gas Crossover:** The ability to stop gas bubbles. If $O_2$ crosses over, it can re-oxidize your products, making it look like your experiment failed.
 
-### Common Choices in Research (Conceptual)
-*   **Nafion (Cation Exchange Membrane):** The industry standard (specifically Nafion 117 or 212). It allows positive ions ($H^+$) to pass but blocks negative ions and gases.
+### Common Choices in Research
+*   **Nafion (Cation Exchange Membrane):** The industry standard specifically Nafion 117 or 212. It allows positive ions ($H^+$) to pass but blocks negative ions and gases.
 *   **Anion Exchange Membranes (AEM):** Membranes that allow negative ions ($OH^-$ or $HCO_3^-$) to pass. These are often used in alkaline electrolytes.
 *   **Salt Bridges / Glass Frits:** The classic laboratory alternative. While they have higher electrical resistance than Nafion, they are cost-effective and sufficient for fundamental studies where high current density is not the primary goal.
+
+---
+
+## 7. The Electrolyte
+The Conductive Medium
+
+### Role & Significance
+The electrolyte is the conductive liquid that fills the cell.
+It serves three main functions:
+1.  **Ionic Conduction:** It closes the circuit between the Anode and Cathode acting like a wire in a circuit.
+2.  **Reactant Source:** It provides the protons ($H^+$) or water molecules ($H_2O$) required to bond with the Carbon.
+3.  **pH Buffer:** $CO_2$ is an acidic gas. When bubbled into water, it forms carbonic acid. The electrolyte buffer (retain the same pH) to keep the reaction environment stable.
+
+### Key Properties That Affect Results
+1.  **Conductivity:** Higher salt concentrations reduce electrical resistance, wasting less energy as heat.
+2.  **Buffering Capacity:** If the local pH at the electrode surface changes too drastically, the reaction can switch from making $CO$ to making Hydrogen.
+3.  **Purity:** This is the most common source of error. Low-grade salts often contain trace amounts of Iron or Zinc, which will plate onto the electrode and ruining experiment.
+
+### Common Choices in Research
+*   **Potassium Bicarbonate ($KHCO_3$):** The standard for H-Cell experiments. Because it is chemically similar to dissolved $CO_2$, it naturally maintains a slightly-acidic pH which is ideal for many catalysts.
+*   **Potassium Hydroxide ($KOH$):** A alkaline electrolyte used in some Flow Cell reactors. It is not commonly used in H-Cell due to other better options.
+*   **Potassium Chloride ($KCl$):** A simple salt sometimes used for testing, though it lacks the buffering ability of bicarbonate.
+
+---
+
+## 8. External Control & Supply Systems
+The Hardware and Support
+
+### Role & Significance
+Only the cell alone cannot operate. The experiment requires external hardware to deliver reactants, control the energy input and collect the data.
+This category involves two distinct feeds:
+1.  **The Gas Feed:** Delivers the $CO_2$ reactant to the cell.
+2.  **The Electronic Feed:** Delivers and measures the electricity.
+If the gas flow fluctuates, the concentration of $CO_2$ at the electrode changes. If the voltage fluctuates, the reaction rate changes. Stability in these external systems is required for consistent data.
+
+### Key Properties That Affect Results
+1.  **Mass Transport:** The $CO_2$ must be delivered at a constant rate. In professional labs, this is controlled to the milliliter per minute (sccm).
+2.  **Voltage Compliance:** The power source must be able to maintain the set voltage even if the resistance of the cell changes during the experiment.
+
+### Common Choices in Research
+*   **Gas Supply:** Mostly used CO2 tank to supply gas in the system; however, user must be aware of its grade as lower grade can comes with impurities.
+*   **Electrical Control:** The most common device is the Potentiostat. It is a computer-controlled device that acts as both the power supply and the multimeter, automatically logging data.
+
+---
+
+## 9. Conceptual Arrangement & Conclusion
+Understanding how everyhting fit together is important in real experiment.
+
+### General Assembly Logic
+While specific designs vary, the standard H-Cell experiment follows this logical arrangement:
+
+1.  **The Gas Path:**
+    *   The $CO_2$ source connects only to the Cathodic Chamber.
+    *   The gas is typically routed through a tube to the bottom of the chamber to create bubbles, saturating the liquid.
+    *   The chamber must have an exhaust vent to allow unreacted gas to escape, preventing build up of pressure.
+
+2.  **The Electrode Placement:**
+    *   **Cathodic Chamber:** Contains the Working Electrode (WE) and the Reference Electrode (RE). The RE is placed as close to the WE as possible to get an accurate reading.
+    *   **Anodic Chamber:** Contains only the Counter Electrode (CE) to prevent contamination from Anodic side (eg. O2 gas generated.)
+
+  ---
+
+## Conclusion
+There is no universally "correct" $CO_2$ electrochemical setup. Valid designs are chosen based on research goals, constraints, and trade-offs. A student measuring catalyst efficiency might prioritize a 3-Electrode H-Cell with a high-quality Reference Electrode. Conversely, a student demonstrating proof-of-concept might use 2-Electrode system with a simple membrane.
+
+The best equipment is simply the setup that allows you to isolate the variable you are trying to study while minimizing sources of error like contamination or instability. Further information on the exact set up each experiment should be obtain from literature reviews.
