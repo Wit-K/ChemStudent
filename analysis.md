@@ -183,18 +183,18 @@ Modern air quality monitoring technology has made specific gas detection more ac
 ---
 
 ## 7. Conclusion
-Data analysis is something that is not only done at the end of the experiments but dictates what the next step in the experiment is as well. This is a step-by-step simple flow for a successful study:
+Data analysis is something that is not only done at the end of the experiments but dictates what the next step in the experiment is as well. This is a simple workflow for the data collection and analysis in general study CO2 reduction reaction:
 
-1.  **Measure Dimensions:** Before starting, measure the Surface Area ($cm^2$) of your working electrode.
+1.  **Measuring the surface area:** Before starting, measure the Surface Area ($cm^2$) of your working electrode.
 2.  **Diagnostic Check (CV):** Run a Cyclic Voltammetry scan to see if the electrode is clean.
 3.  **Performance Check (LSV):** Run a Linear Sweep Voltammetry to find the Onset Potential.
 4.  **Production Run (Chronoamperometry):** Pick a voltage and hold for a period of time.
     *   *Action:* During this hour, collect gas samples (if using GC) or wait to sample the liquid (if analyzing liquids).
-5.  **The Math:**
+5.  **The Calculation:**
     *   Take the average Current ($I$) from Step 4.
     *   Divide by Area to get Current Density ($j$).
     *   Quantify product moles ($n$) using your selected detection method.
     *   Calculate Faradaic Efficiency ($FE$).
 6.  **Report:**
-    *   Present the Current Density graph to show Activity.
-    *   Present the FE bar chart to show Selectivity.  
+    *   The Current Density graph to show Activity.
+    *   The FE bar chart to show Selectivity.  
