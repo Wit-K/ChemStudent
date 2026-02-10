@@ -11,9 +11,10 @@
 To understand this project, we must first know what electrochemical reduction is. In chemistry, "reduction" simply means gaining electrons.
 
 Most people are familiar with combustion, where we burn a fuel with oxygen to release energy. This process produces carbon dioxide ($$CO_2$$) and water.
+
 $$ Fuel + Oxygen \rightarrow CO_2 + H_2O + Energy $$
 
-We can actually reverse that process and that is essentially what "CO2 Reduction (CO2R)" is. We use energy from different sources (like heat or light) to complete this process, but electrical energy is what we will be focusing on as it is the most efficient yet. Using energy to force electrons back into carbon dioxide, we can convert it from a waste product back into a useful fuel or chemical feedstock, naming it the process of "electrochemical CO2 redcution".
+We can actually reverse that process and that is essentially what "CO2 Reduction (CO2R)" is. We use energy from different sources (like heat or light) to complete this process, but electrical energy is what we will be focusing on as it is the most efficient yet. Using energy to force electrons back into carbon dioxide, we can convert it from a waste product back into a useful fuel or chemical feedstock, naming it the process of "electrochemical CO2 reduction".
 
 $$ CO_2 + H_2O + Energy (Electricity) \rightarrow Fuel + Oxygen $$
 
@@ -24,7 +25,7 @@ Because $$CO_2$$ is an extremely stable molecule, it does not want to react. It 
 ## 2. Basic Electrochemistry
 Experiments in this field take place inside an "electrolytic cell". Unlike a battery (which creates electricity from chemicals), an electrolytic cell uses an external power source to force non-spontaneous chemical reactions to happen.
 
-The three critical components of the system include:
+The critical components of the system include:
 
 ### The Cathode (The Reduction Site)
 The cathode is the "electrode" connected to the negative terminal of the power supply. This is where electrons enter the solution.
@@ -63,11 +64,11 @@ A large piece of copper will naturally allow more current to pass than a thin co
 ---
 
 ## 4. Common Misconception
-Before diving deeper into the more complex part of the CO2 reduction, let's clear up some confusion you may have.
+These are the common misconception you may have along exploring this new
 
 **1. Where does the Hydrogen come from?**
 You will notice the equations have $$H^+$$ in them.
-$$ CO_2 + 2H^+ + 2e^- \rightarrow CO + H_2O $$
+($$ CO_2 + 2H^+ + 2e^- \rightarrow CO + H_2O $$)
 But if we are only pumping in $$CO_2$$ gas, where is the $$H^+$$ even coming from?
 *   **The Answer:** It comes from the water ($$H_2O$$) or the Bicarbonate ($$HCO_3^-$$) in the electrolyte. This is why the reaction must happen in a water-based solution. The electricity splits the water and provide the protons needed to form the coumpounds.
 
@@ -79,7 +80,7 @@ When we say "Fuel," don't expect liquid gasoline or diesel to drip right off the
 ---
 
 ## 5. Thermodynamics and Kinetics
-A common questions from beginners is why the reaction does not start exactly at the theoretical voltage.
+Why does the reaction does not start exactly at the theoretical voltage?
 
 ### The Energy Barrier
 Even if you apply enough energy to make the reaction possible, the reaction might still be too slow to measure. This is because molecules need to rearrange themselves, bonds need to break, and intermediates need to form.
@@ -103,7 +104,8 @@ $$ 2H^+ + 2e^- \rightarrow H_2 $$
 This is called the "Hydrogen Evolution Reaction (HER)". It is an annoying competing reaction that wastes electricity and hinders reactions that we actually want.
 
 ### Selectivity (Faradaic Efficiency)
-We measure the efficiency using "Faradaic Efficiency (FE)". It represents the percentage of electrons that went into making the product you want (like methane) against all the products produced (including Hydrogen).
+We measure the efficiency using "Faradaic Efficiency (FE)". It represents the percentage of electrons that went into making the product you want against all the products produced (including Hydrogen).
+**Example:**
 *   **100% FE:** Every electron resulted in $$CO_2$$ reduction.
 *   **50% FE:** Half of the electron resulted in $$CO_2$$ reduction.
 *   **0% FE:** All electrons were wasted making Hydrogen gas.
@@ -111,7 +113,7 @@ We measure the efficiency using "Faradaic Efficiency (FE)". It represents the pe
 ---
 
 ## 7. The Core Idea
-You might wonder: If we are applying electricity, why doesn't the CO2 just break apart on its own?
+If we are applying electricity, why doesn't the CO2 just break apart on its own?
 
 ### The Stability Problem
 Carbon Dioxide is an incredibly stable molecule: it has a linear shape ($$O=C=O$$) with strong double bonds. It is already happy as is and resist changes coming in its way. So if you just stick a wire in water and apply voltage, don't expect long chain carbon compound to form; the electricity will ignore CO2 and just split water, which is easy to break apart, instead.
@@ -124,16 +126,17 @@ This is where the metal electrode comes into play. The reaction does not happen 
 4.  **Desorption:** Once the fuel is made, the metal must let go so the product can float away and make room for more CO2.
 
 ### The "Goldilocks" Zone
-This is the heart of modern research. Scientists are trying to find or design a material that is just right.
+The metal must bind to the CO2 with just the right amount of force for it to create products efficeintly. Scientists are trying to find or design a material that is just right.
 *   **Too Weak:** If the metal doesn't hold onto the CO2 strongly enough, the reaction never starts and all was there is Hydrogen.
 *   **Too Strong:** If the metal grabs too tight, the CO2 gets stuck. The surface gets clogged, and the reaction stops. This is the term define as "surface poisoning".
 *   **Just Right:** The metal holds onto CO2 long enough to break it, but lets go of after the product form.
+
 The goal of the research is to find a catalyst surface that has this perfect balance.
 
 ---
 
 ## 8. Catalyst materials
-Not all metals act the same and they can often be categorized into three groups based on what they produce when applied electricity:
+Not all metals act the same and they can often be categorized into three groups based on what they produce:
 
 ### Group 1: Hydrogen Producers
 **Metals:** Platinum (Pt), Nickel (Ni), Iron (Fe), Titanium (Ti) and more.
@@ -156,9 +159,8 @@ It is unique in the periodic table and the only metal known to make multi-carbon
 ---
 
 ## 9. The Physical Limit
-Finally, we must understand the environment and its limit in real-world. CO2 is a gas, but the reaction happens on the solid metal surface inside a liquid.
-
-For the reaction to work, CO2 gas must dissolve into the water to reach the electrode.
+Finally, we must understand the environment and its limit in real-world. CO2 is a gas, but the reaction happens on the solid metal surface inside a liquid. For the reaction to work, CO2 gas must dissolve into the water to reach the electrode.
+Some of the limits are:
 1.  **Solubility:** CO2 does not dissolve well in water: just around 33mM concentration at room temperature.
 2.  **Mass Transport:** As you run the reaction, you use up the CO2 near the metal surface. If new CO2 cannot diffuse in fast enough, the reaction stops and Hydrogen evolution takes over instead.
 
