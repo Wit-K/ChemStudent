@@ -112,38 +112,40 @@ If you ran 100 Coulombs of charge ($Q$) and produced a small amount of Methane, 
 
 ---
 
-## 5. Visualizing the Data in Graph
-Countless of numbers collected from the instrument don't tell us the whole story; we need to connect the dots and interpret the whole reaction. To understand how a catalyst behaves, we plot current, voltage and time.
+## 4. The Collection Protocol
+*Standard Operating Procedures for Data Acquisition*
 
-### A. The Sweep Techniques: LSV and CV
-These are the first experiments you run to see if your catalyst is working. You vary the voltage and measure the current output.
+Before diving into the experiment, you must establish a strict routine for when and how you collect data. Because all datas are different, they require different sampling strategies.
 
-**1. Linear Sweep Voltammetry (LSV)**
-*   **The Action:** The potentiostat scans the voltage in one direction (e.g., from 0V down to -2.0V).
-*   **The Result:** A graph where the current stays near zero until a specific voltage, then drastically shoots down. This is because a reaction has its own specific minimum for the reaction to proceed.
-*   **Onset Potential:** This is the voltage where the current starts to rise meaning the reaction turns on. A more positive onset potential is better as it can be inferred the reaction needs less energy to start. (Note that positive is less energy as we are considering the reduction reaction where we look at negative potentials)
+### A. The Geometric Surface Area ($A_{geo}$)
+*   **Timing:** Before the experiment.
+*   **The Problem:** Current Density ($j$) depends entirely on this number. Most standard benchmarks in the field are reported in $mA/cm^2_{geo}$ (Geometric Surface Area).
+*   **The Protocol:**
+    1.  Measure the width of your copper strip with digital calipers.
+    2.  Mark the depth of immersion (how deep it goes into the water).
+    3.  **The Formula:** $$ Area = Width \times Depth \times 2 $$
+    *   *Note:* 1. We multiply by 2 because the foil has two sides reacting with the liquid; however, you can also tape a non conductive tape to define your surface area. 2. This method does not account for microscopic roughness (ECSA). While advanced studies calculate "Specific Activity" using capacitance ($C_{dl}$), for high school and general engineering purposes, Geometric Area is the standard.
 
-**2. Cyclic Voltammetry (CV)**
-*   **The Action:** The potentiostat scans the voltage down and then back up in a loop (0V $\rightarrow$ -2.0V $\rightarrow$ 0V).
-*   **The Result:** A supposedly Duck-shaped loop, but the shape can varies with the experiments and conditions.
-*   **The Difference:** While LSV just shows performance, CV is a diagnostic tool. The shape tells you about the capacitance (surface area) and reversibility. If the graph looks totally different in a few loop, the catalyst might be unstable. This is why in research, they often run the loop many times to ensure stability and reproducibility.
+### B. Gas Sampling Strategy
+*   **Timing:** Every 15 to 20 minutes (e.g., T=20, T=40, T=60).
+*   **The Logic:** Unlike liquids, gas products flow out of the cell and are lost to the exhaust.
+    *   **The Logic:** A GC injection captures the instantaneous production rate at that specific moment. By sampling multiple times, you can also prove that the catalyst isn't dying. If the T=20 sample has high methane but T=60 has zero, the catalyst has deactivated.
 
-So while CV offer more data to interpret, LSV maybe suited to some experiment such as experiment focusing on steady state behavior.
+### C. Liquid Sampling Strategy (Accumulation)
+*   **Timing:** At the very end (T=Final).
+*   **The Logic:** Liquid products (Formate, Ethanol) remain trapped in the electrolyte.
+    *   **The Cumulative Average:** We typically analyze the liquid after the experiment is finished. This tells us the average production rate over the entire hour.
+    *   *Why not sample often?* Removing liquid during the run changes the volume of the electrolyte, which can alter the resistance and concentration, introducing error.
 
-### B. Chronoamperometry (CA)
-LSV and CV only last a few seconds. To measure products, you need to run the reaction for a longer period.
+### D. Electrical Sampling (Continuous)
+*   **Timing:** Continuous (Sampling rate: ~1 point per second).
+*   **The Protocol:** The potentiostat logs the current automatically. But be sure to monitor the live graph for Noise. Sudden spikes or drops often indicate a bubble blocking the electrode or a loose wire connection.
 
-*   **The Action:** Hold the voltage constant (e.g. -1.0V) and record current over time.
-*   **The Graph:**
-    *   **X-Axis:** Time (Seconds)
-    *   **Y-Axis:** Current Density ($mA/cm^2$)
-*   **Interpretation:**
-    *   **Flat Line:** Stable catalyst.
-    *   **Declining Line:** The catalyst is unstable (e.g. being poisoned or falling off).
+*Note: While these are the standard protocols, every experiment is unique. Ensure your sampling method is consistent across all trials to avoid bias.*
 
 ---
 
-## 6. Product Detection
+## 5. Product Detection
 The most common beinner's misconception is thinking that the we can tell what products we made from the current alone. But in truth, the machine doesn't know if those electrons made Methane, Carbon Monoxide, or just Hydrogen. To find the moles for your efficiency calculation, you need a separate detection method. To find the moles for the efficiency calculation, you must analyze both the gas coming out of the cell and the liquid electrolyte inside the cell.
 
 ### A. The Professional Standards
@@ -181,7 +183,84 @@ Modern air quality monitoring technology has made specific gas detection more ac
 
 ---
 
-## 7. Conclusion
+## 6. Case Study: A Real Calculation Walkthrough
+*Putting the Theory into Practice*
+
+Let's look at a hypothetical experiment to see how we go from raw spreadsheet numbers to a final percentage.
+
+### The Scenario
+You are testing a Silver (Ag) catalyst to produce Carbon Monoxide (CO). You run the experiment for 30 minutes.
+
+### Step 1: Gather the Raw Data
+Here is what you measured in the lab:
+*   **Average Current ($I$):** 50 mA (milliamps)
+*   **Time ($t$):** 1800 seconds (30 mins)
+*   **Electrode Area ($A$):** 2.5 $cm^2$
+*   **Product Detected ($n$):** The GC tells you that you made 150 micromoles ($\mu mol$) of CO gas.
+
+### Step 2: Calculate Activity (Current Density)
+First, we normalize the current to see how fast the reaction ran per unit area.
+$$ j = \frac{I}{A} = \frac{50 \ mA}{2.5 \ cm^2} = \mathbf{20 \ mA/cm^2} $$
+*Result:* This is a decent reaction rate for a student setup.
+
+### Step 3: Calculate Selectivity (Faradaic Efficiency)
+Now, we find out what percentage of the electricity actually made the CO.
+
+**A. Calculate Total Electrical Charge ($Q_{total}$)**
+Convert mA to Amps first.
+$$ Q = I \times t = 0.050 \ A \times 1800 \ s = \mathbf{90 \ Coulombs} $$
+
+**B. Calculate Chemical Charge ($Q_{product}$)**
+How much charge is "stored" in the CO?
+*   Target: CO
+*   Electrons required ($z$): 2 (from the Table earlier)
+*   Moles ($n$): $150 \mu mol = 0.000150 \ mol$
+*   Faraday ($F$): $96,485 \ C/mol$
+
+$$ Q_{product} = n \times z \times F $$
+$$ Q_{product} = 0.000150 \times 2 \times 96,485 = \mathbf{28.95 \ Coulombs} $$
+
+**C. The Final Ratio**
+$$ FE = \frac{Q_{product}}{Q_{total}} \times 100 $$
+$$ FE = \frac{28.95}{90} \times 100 = \mathbf{32.1\%} $$
+
+### The Interpretation
+You have 32% Faradaic Efficiency for CO. And since Silver mostly makes CO and Hydrogen, the remaining 68% of the electrons likely went into making Hydrogen gas.
+
+---
+
+## 7. Visualizing the Data in Graph
+Countless of numbers collected from the instrument don't tell us the whole story; we need to connect the dots and interpret the whole reaction. To understand how a catalyst behaves, we plot current, voltage and time.
+
+### A. The Sweep Techniques: LSV and CV
+These are the first experiments you run to see if your catalyst is working. You vary the voltage and measure the current output.
+
+**1. Linear Sweep Voltammetry (LSV)**
+*   **The Action:** The potentiostat scans the voltage in one direction (e.g., from 0V down to -2.0V).
+*   **The Result:** A graph where the current stays near zero until a specific voltage, then drastically shoots down. This is because a reaction has its own specific minimum for the reaction to proceed.
+*   **Onset Potential:** This is the voltage where the current starts to rise meaning the reaction turns on. A more positive onset potential is better as it can be inferred the reaction needs less energy to start. (Note that positive is less energy as we are considering the reduction reaction where we look at negative potentials)
+
+**2. Cyclic Voltammetry (CV)**
+*   **The Action:** The potentiostat scans the voltage down and then back up in a loop (0V $\rightarrow$ -2.0V $\rightarrow$ 0V).
+*   **The Result:** A supposedly Duck-shaped loop, but the shape can varies with the experiments and conditions.
+*   **The Difference:** While LSV just shows performance, CV is a diagnostic tool. The shape tells you about the capacitance (surface area) and reversibility. If the graph looks totally different in a few loop, the catalyst might be unstable. This is why in research, they often run the loop many times to ensure stability and reproducibility.
+
+So while CV offer more data to interpret, LSV maybe suited to some experiment such as experiment focusing on steady state behavior.
+
+### B. Chronoamperometry (CA)
+LSV and CV only last a few seconds. To measure products, you need to run the reaction for a longer period.
+
+*   **The Action:** Hold the voltage constant (e.g. -1.0V) and record current over time.
+*   **The Graph:**
+    *   **X-Axis:** Time (Seconds)
+    *   **Y-Axis:** Current Density ($mA/cm^2$)
+*   **Interpretation:**
+    *   **Flat Line:** Stable catalyst.
+    *   **Declining Line:** The catalyst is unstable (e.g. being poisoned or falling off).
+
+---
+
+## 8. Conclusion
 Data analysis is something that is not only done at the end of the experiments but dictates what the next step in the experiment is as well. This is a simple workflow for the data collection and analysis in general study CO2 reduction reaction:
 
 1.  **Measuring the surface area:** Before starting, measure the Surface Area of your working electrode.
