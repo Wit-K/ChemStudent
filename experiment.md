@@ -185,6 +185,4 @@ While specific designs vary, the standard H-Cell experiment follows this logical
   ---
 
 ## Conclusion
-There is no universally "correct" $CO_2$ electrochemical setup. Valid designs are chosen based on research goals, constraints, and trade-offs. A student measuring catalyst efficiency might prioritize a 3-Electrode H-Cell with a high-quality Reference Electrode. Conversely, a student demonstrating proof-of-concept might use 2-Electrode system with a simple membrane.
-
-The best equipment is simply the setup that allows you to isolate the variable you are trying to study while minimizing sources of error like contamination or instability. Further information on the exact set up each experiment should be obtain from literature reviews.
+There is no universally "correct" $CO_2$ electrochemical setup. Valid designs are chosen based on research goals, constraints, and trade-offs. The best equipment is simply the setup that allows you to isolate the variable you are trying to study while minimizing sources of error like contamination or instability. Further information on the exact set up each experiment should be obtain from literature reviews and each consequence should be carefully considered before adjusting.
