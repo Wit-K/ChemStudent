@@ -52,6 +52,10 @@ These issues pop up immediately upon starting the experiment and are generally r
 
 ## 3. Category B: Electrochemical Performance
 The chemical reaction is not behaving as predicted.
+
+![Stability Troubleshooting](./assets/images/stability_troubleshooting.png)
+*Figure : Diagnostic Stability Plots. Green = Healthy. Orange = Poisoned (decaying). Red = Noise (bubbles/loose wire).*
+
 ### Issue: Catalyst Deactivation
 *   **Symptom:**
     The current starts high and promising, but then decays rapidly (e.g. dropping by 50% within the first 20 minutes) without stabilizing.
