@@ -16,7 +16,7 @@ Part2: Analysis and Break Down of each Critical Component in Common Design.
 
 ---
 
-## 9. Safety & Operational Hazards
+## Safety & Operational Hazards
 *Common protocols for handling gases and electricity.*
 
 *   **Carbon Monoxide (CO) Toxicity:**
@@ -53,7 +53,6 @@ If you put everything in one beaker, the oxygen produced in Anodic Chamber would
 ---
 
 ## 2. The Hardware Setup
-
 To perform CO2 reduction, you need a specific set of components arranged in a standard 3-Electrode System. This setup ensures we can control the voltage precisely while keeping the fuel products separate from the waste oxygen.
 
 ![H-Cell Schematic](./assets/images/h_cell_schematic.png)
@@ -66,7 +65,7 @@ To perform CO2 reduction, you need a specific set of components arranged in a st
 | **Working Electrode (WE)** | This is the Cathode where CO2 reduction happens. | Copper Foil (Cu), Gold (Au), or Silver (Ag) |
 | **Counter Electrode (CE)** | This is the Anode that completes the circuit (usually making Oxygen). | Platinum (Pt) Mesh or Wire |
 | **Reference Electrode (RE)** | Measures the voltage accurately without passing current. | Ag/AgCl (Silver/Silver Chloride) |
-| **The H-Cell** | A glass vessel with two chambers to separate products. | Borosilicate Glass |
+| **H-Cells and External Supplies** | A two-chamber glass vessel and essential $CO_2$ and electricity sources. | Potentiostat, $CO_2$ Gas Tank |
 | **Nafion Membrane** | Allows protons ($H^+$) to cross but stops fuel from mixing with oxygen. | Nafion 117 or 115 |
 | **Electrolyte** | Conducts ions and holds the dissolved CO2. | 0.1M $KHCO_3$ (Potassium Bicarbonate) |
 
@@ -74,7 +73,7 @@ To perform CO2 reduction, you need a specific set of components arranged in a st
 
 ### 2.1 The Three Electrodes
 
-#### The Working Electrode (WE)
+#### 2.1.1 The Working Electrode (WE)
 
 ##### Role & Significance
 The Working Electrode (Cathode) is the centerpiece of the experiment. It serves as the electron donor and the active site where the reduction reaction occurs. Connected to the negative terminal, most of the time, the Working Electrode is the catalyst. In electrochemistry, the material of the electrode dictates the entire reaction pathway. The specific atomic arrangement on the surface determines whether $CO_2$ is converted into Carbon Monoxide, Methane, or just Hydrogen gas. Therefore, the choice of the Working Electrode is the primary variable in any $$CO_2$$ reduction study.
@@ -94,7 +93,7 @@ These metals can undergoes several tuning and modifying as stated. The common ex
 
 ---
 
-#### The Counter Electrode (CE)
+#### 2.1.2 The Counter Electrode (CE)
 
 ##### Role & Significance
 The Counter Electrode (Anode) completes the electrical circuit. While the focus of the experiment is on the cathode side, the anode is necessary for the system to fully function. Connected to the positive terminal, the Counter Electrode balances the reaction. For every electron consumed by the $CO_2$ reduction at the cathode, an oxidation reaction must occur here (typically splitting water into Oxygen).
@@ -110,7 +109,7 @@ The Counter Electrode (Anode) completes the electrical circuit. While the focus 
 
 ---
 
-#### The Reference Electrode (RE)
+#### 2.1.3 The Reference Electrode (RE)
 
 ##### Role & Significance
 The Reference Electrode provides a stable, known voltage against which the Working Electrode is measured. In a standard 3-electrode setup, the Reference Electrode does not carry current. Its sole purpose is to sense the potential at the Working Electrode without interference from the Anode. Without a Reference Electrode, you will be measuring the voltage across the entire cell, which includes the wires and solution resistance, making it impossible to know exactly how much energy is being applied to the reaction itself.
@@ -127,65 +126,60 @@ The Reference Electrode provides a stable, known voltage against which the Worki
 ---
 
 ### 2.2 The Reaction Vessel
-*(detailed text for H-Cell, Membrane, and Electrolyte)*
 
+#### 2.2.1 The Membrane
 
----
-
-
-## 6. The Membrane
-
-### Role & Significance
+##### Role & Significance
 The Membrane is the physical barrier located inside the bridge of the H-Cell, separating the Cathodic chamber from the Anodic chamber. The membrane serves two key functions: it must block chemicals while allowing electricity to flow.
 1.  **Isolation:** It prevents gases produced at the Anode from migrating to the Cathode which, otherwise, would have ruined the reaction.
 2.  **Conduction:** It must allow ions to pass through freely to complete the circuit. If the membrane is restrictive, the electrical resistance increases, and the cell heats up.
 
-### Key Properties That Affect Results
+##### Key Properties That Affect Results
 1.  **Ionic Conductivity:** How easily ions flow through. High resistance leads to a large voltage drop, called "IR drop", across the cell.
 2.  **Gas Crossover:** The ability to stop gas bubbles. If $O_2$ crosses over, it can re-oxidize your products, making it look like your experiment failed.
 
-### Common Choices in Research
+##### Common Choices in Research
 *   **Nafion (Cation Exchange Membrane):** The industry standard specifically Nafion 117 or 212. It allows positive ions ($H^+$) to pass but blocks negative ions and gases.
 *   **Anion Exchange Membranes (AEM):** Membranes that allow negative ions ($OH^-$ or $HCO_3^-$) to pass. These are often used in alkaline electrolytes.
 *   **Salt Bridges / Glass Frits:** The classic laboratory alternative. While they have higher electrical resistance than Nafion, they are cost-effective and sufficient for fundamental studies where high current density is not the primary goal.
 
 ---
 
-## 7. The Electrolyte
+#### 2.2.2 The Electrolyte
 
-### Role & Significance
+##### Role & Significance
 The electrolyte is the conductive liquid that fills the cell.
 It serves three main functions:
 1.  **Ionic Conduction:** It closes the circuit between the Anode and Cathode acting like a wire in a circuit.
 2.  **Reactant Source:** It provides the protons ($H^+$) or water molecules ($H_2O$) required to bond with the Carbon.
 3.  **pH Buffer:** $CO_2$ is an acidic gas. When bubbled into water, it forms carbonic acid. The electrolyte buffer (retain the same pH) to keep the reaction environment stable.
 
-### Key Properties That Affect Results
+##### Key Properties That Affect Results
 1.  **Conductivity:** Higher salt concentrations reduce electrical resistance, wasting less energy as heat.
 2.  **Buffering Capacity:** If the local pH at the electrode surface changes too drastically, the reaction can switch from making $CO$ to making Hydrogen.
 3.  **Purity:** This is the most common source of error. Low-grade salts often contain trace amounts of Iron or Zinc, which will plate onto the electrode and ruining experiment.
 
-### Common Choices in Research
+##### Common Choices in Research
 *   **Potassium Bicarbonate ($KHCO_3$):** The standard for H-Cell experiments. Because it is chemically similar to dissolved $CO_2$, it naturally maintains a slightly-acidic pH which is ideal for many catalysts.
 *   **Potassium Hydroxide ($KOH$):** A alkaline electrolyte used in some Flow Cell reactors. It is not commonly used in H-Cell due to other better options.
 *   **Potassium Chloride ($KCl$):** A simple salt sometimes used for testing, though it lacks the buffering ability of bicarbonate.
 
 ---
 
-## 8. External Control & Supply Systems
+#### 2.2.3 External Control & Supply Systems
 
-### Role & Significance
+##### Role & Significance
 Only the cell alone cannot operate. The experiment requires external hardware to deliver reactants, control the energy input and collect the data.
 This category involves two distinct feeds:
 1.  **The Gas Feed:** Delivers the $CO_2$ reactant to the cell.
 2.  **The Electronic Feed:** Delivers and measures the electricity.
 If the gas flow fluctuates, the concentration of $CO_2$ at the electrode changes. If the voltage fluctuates, the reaction rate changes. Stability in these external systems is required for consistent data.
 
-### Key Properties That Affect Results
+##### Key Properties That Affect Results
 1.  **Mass Transport:** The $CO_2$ must be delivered at a constant rate. In professional labs, this is controlled to the milliliter per minute (sccm).
 2.  **Voltage Compliance:** The power source must be able to maintain the set voltage even if the resistance of the cell changes during the experiment.
 
-### Common Choices in Research
+##### Common Choices in Research
 *   **Gas Supply:** Mostly used CO2 tank to supply gas in the system; however, user must be aware of its grade as lower grade can comes with impurities.
 *   **Electrical Control:** The most common device is the Potentiostat. It is a computer-controlled device that acts as both the power supply and the multimeter, automatically logging data.
 
