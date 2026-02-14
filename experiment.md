@@ -188,6 +188,60 @@ If the gas flow fluctuates, the concentration of $CO_2$ at the electrode changes
 
 ---
 
+## 3. Pre-Experiment Preparation
+Before you assemble the cell, you must prepare the materials.
+
+### 3.1 Polishing the Electrode
+The copper surface must be atomically clean. Even a fingerprint can block the reaction.
+1.  **Sand:** Use fine-grit sandpaper (e.g., 2000 grit) to remove visible oxidation.
+2.  **Polish:** Place a polishing cloth on a flat surface. Add Alumina slurry ($0.05 \mu m$).
+3.  **The Figure-8:** Move the electrode in a "Figure-8" motion. Do not press too hard.
+4.  **Clean:** Rinse with Distilled Water.
+5.  **Sonicate (Crucial):** Place the electrode in a beaker of water/acetone and put it in an ultrasonic bath for 5 minutes. This vibrates off the microscopic dust left by the polishing.
+
+### 3.2 Membrane Hydration
+The Nafion membrane acts like a sponge. If it is dry, it is brittle and non-conductive.
+*   **The Golden Rule:** Never let the membrane dry out.
+*   **Activation:** Soak the membrane in your electrolyte ($0.1M \ KHCO_3$) or deionized water for at least 24 hours before use.
+*   **Storage:** Keep it in a sealed jar of water when not in use.
+
+---
+
+## 4. Assembly & Wiring
+Once the parts are clean, assemble the H-Cell. Ensure the membrane is sandwiched tightly between the two chambers to prevent leaks.
+
+### 4.1 The Wiring (The "Traffic Light" System)
+Connecting the Potentiostat can be confusing because cable colors vary by brand (Biologic, Gamry, CH Instruments). However, the logic is always the same:
+
+| **Cable Role** | **Common Color** | **Connects To** |
+| :--- | :--- | :--- |
+| **Working (WE)** | Green or Blue | **The Copper Electrode.** This is where we measure the reduction. |
+| **Counter (CE)** | Red | **The Platinum Wire.** This completes the circuit. |
+| **Reference (RE)** | White | **The Ag/AgCl.** This measures the voltage. |
+| **Sense (S)** | (Often attached to WE) | Connect this to the **Working Electrode** as well to improve accuracy. |
+
+> **⚠️ Double Check:** If you swap the Counter and Reference cables, you can instantly destroy your Reference Electrode by forcing high current through it!
+
+---
+
+## 5. The Start-Up Protocol
+You cannot simply turn on the voltage. You must first create the right environment.
+
+### 5.1 Purging (Removing the Oxygen)
+Air contains ~21% Oxygen. Oxygen is much easier to reduce than CO2. If any Oxygen remains in your water, the electricity will waste its energy turning Oxygen into Water instead of CO2 into fuel.
+
+1.  **Insert the Gas Tube:** Place the CO2 gas tube (sparger) directly **into the liquid** at the bottom of the cell.
+2.  **Bubble:** Let the CO2 bubble vigorously for **20-30 minutes**.
+3.  **The Blanket:** After 30 minutes, you can pull the tube up to the "headspace" (above the liquid) if you are measuring gas products, or leave it bubbling gently.
+
+### 5.2 The Leak Check
+Before starting the electricity:
+1.  Close the cell outlet.
+2.  Apply soapy water to the joints.
+3.  If you see bubbles growing on the outside, you have a gas leak. Tighten the clamps.
+
+---
+
 ## 10. General Assembly Concept
 While specific designs vary, the standard H-Cell experiment follows this logical arrangement:
 
