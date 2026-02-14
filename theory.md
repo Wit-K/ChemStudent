@@ -87,7 +87,7 @@ The goal of the research is to find a catalyst surface that has this perfect bal
 
 ---
 
-## 4. Understanding Measurements and Variables
+## 4.1 Understanding Measurements and Variable
 In an electrochemical experiment, there are two main parameters we can alter or measure: Potential and Current. It is vital to understand the difference between the driving force and the reaction rate.
 
 ### Potential (Voltage)
@@ -103,7 +103,7 @@ While voltage is the push, the current is the flow. Current measures the rate at
 ### Surface Area and Normalization
 A large piece of copper will naturally allow more current to pass than a thin copper wire, just because there is more space for the reaction to occur. This makes comparision unfair. So, to make fair comparisons between different experiments, we wil look at "Current Density" instead. This is the ratio of current by surface area of the electrode, telling us how active the material is regardless of its size.
 
-## 4. Thermodynamics and Kinetics
+## 4.2 Thermodynamics and Kinetics
 Why does the reaction does not start exactly at the theoretical voltage?
 
 ### The Energy Barrier
@@ -126,9 +126,13 @@ The most difficult part of $$CO_2$$ reduction is not breaking the $$CO_2$$; it i
 
 ### The Hydrogen Problem
 Since our electrolyte is mostly water, there are billions of water molecules surrounding the electrode for every one CO2 molecule. Water can also accept electrons to form Hydrogen gas ($$H_2$$).
+
 $$ 2H^+ + 2e^- \rightarrow H_2 $$
 
 This is called the "Hydrogen Evolution Reaction (HER)". It is an annoying competing reaction that wastes electricity and hinders reactions that we actually want.
+And, where does the hydrogen comes from then? You might wonder: if we only pump in CO2 gas, where does the Hydrogen come from? It comes from the water itself.
+
+$$ H_2O ⇌ H^+ + OH^- $$
 
 ### Selectivity (Faradaic Efficiency)
 We measure the efficiency using "Faradaic Efficiency (FE)". It represents the percentage of electrons that went into making the product you want against all the products produced (including Hydrogen).
@@ -140,7 +144,7 @@ We measure the efficiency using "Faradaic Efficiency (FE)". It represents the pe
 ---
 
 ## 6. Catalyst materials
-Not all metals act the same and they can often be categorized into three groups based on what they produce:
+When we say we are making fuel, don't expect liquid gasoline to drip off the catalyst. For example, group 1 & 2 metals make gas (CO/Hydrogen) that float away and Copper makes liquid alcohols that dissolve invisibly into the water. So, because they don't act the same, they are often be categorized into groups based on what they produce:
 
 ### Group 1: Hydrogen Producers
 **Metals:** Platinum (Pt), Nickel (Ni), Iron (Fe), Titanium (Ti) and more.
@@ -168,28 +172,13 @@ It is unique in the periodic table and the only metal known to make multi-carbon
 ## 7. The Physical Limit
 We must understand the environment and its limit in real-world. $$CO_2$$ is a gas, but the reaction happens on the solid metal surface inside a liquid. For the reaction to work, $$CO_2$$ gas must dissolve into the water to reach the electrode.
 Some of the limits are:
-1.  **Solubility:** CO2 does not dissolve well in water: just around 33mM concentration at room temperature.
-2.  **Mass Transport:** As you run the reaction, you use up the CO2 near the metal surface. If new CO2 cannot diffuse in fast enough, the reaction stops and Hydrogen evolution takes over instead.
+1.  **Solubility:** $CO_2$ does not dissolve well in water: just around 33mM concentration at room temperature.
+2.  **Mass Transport:** As you run the reaction, you use up the CO2 near the metal surface. If new $CO_2$ cannot diffuse in fast enough, the reaction stops and Hydrogen evolution takes over instead.
 
-This is why you will see instructions to bubble CO2 gas continuously into the solution. It keeps the water saturated with CO2, giving enough room for valuable reactions to happen. 
-
----
-
-## Extra: Common Misconception (Under Reconstruction)
-These are the common misconception you may have along exploring this new topic.
-
-**1. Where does the Hydrogen come from?**
-You will notice the equations have $$H^+$$ in them.
-($$ CO_2 + 2H^+ + 2e^- \rightarrow CO + H_2O $$)
-But if we are only pumping in $$CO_2$$ gas, where is the $$H^+$$ even coming from?
-*   **The Answer:** It comes from the water ($$H_2O$$) or the Bicarbonate ($$HCO_3^-$$) in the electrolyte. This is why the reaction must happen in a water-based solution. The electricity splits the water and provide the protons needed to form the coumpounds.
-
-**2. What does the product look like?**
-When we say "Fuel," don't expect liquid gasoline or diesel to drip right off the electrode.
-*   **Gas Products:** Carbon Monoxide ($$CO$$), Methane ($$CH_4$$), and Ethylene ($$C_2H_4$$) will appear as bubbles mixing with the unreacted $$CO_2$$ bubbles.
-*   **Liquid Products:** Formate ($$HCOO^-$$) and Ethanol ($$C_2H_5OH$$) will dissolve into the water. You won't be able to distinguishes them from water. You will have to test the liquid later to find out the what actually comes out.
+This is why you will see instructions to bubble $CO_2$ gas continuously into the solution. It keeps the water saturated with $CO_2$, giving enough room for valuable reactions to happen. 
 
 ---
+
 
 ## Extra: The Reaction Environment (Under Reconstruction)
 To truly control the reaction, you must look beyond the metal and look at the liquid environment.
