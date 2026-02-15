@@ -97,7 +97,8 @@ These are the first experiments you run to see if your catalyst is working. You 
 
 **2. Cyclic Voltammetry (CV)**
 *   **The Action:** The potentiostat scans the voltage down and then back up in a loop (0V $\rightarrow$ -2.0V $\rightarrow$ 0V).
-*   **The Result:** A supposedly Duck-shaped loop, but the shape can varies with the experiments and conditions.
+*   **The Result:** A graph in which the shape of the loop acts like a fingerprint for your electrode's surface. The important thing is consistency: if the loops look the same cycle after cycle, your system is stable.
+
 *   **The Difference:** While LSV just shows performance, CV is a diagnostic tool. The shape tells you about the capacitance (surface area) and reversibility. If the graph looks totally different in a few loop, the catalyst might be unstable. This is why in research, they often run the loop many times to ensure stability and reproducibility.
 
 So while CV offer more data to interpret, LSV maybe suited to some experiment such as experiment focusing on steady state behavior.
@@ -163,6 +164,11 @@ Modern air quality monitoring technology has made specific gas detection more ac
 *   **The Concept:** Metal-oxide semiconductor sensors (commonly used in safety alarms) react specifically to Carbon Monoxide or combustible gases.
 *   **The Insight:** While these sensors typically lack the high resolution of a GC, they can provide semi-quantitative data (Parts Per Million) to confirm that Carbon Monoxide is being produced, distinguishing a successful CO2 reduction from a simple Hydrogen evolution reaction.
 
+**4. Water Displacement**
+We can actually measure the gas volume by using the concept of displacement.
+*   **The Concept:** Connect the gas outlet of your cell to a tube positioned inside an inverted, water-filled graduated cylinder. As gas is produced, it displaces the water, allowing you to measure the exact volume of gas generated over time.
+*   **The Insight:** This acts as a crucial sanity check for mass balance. If the volume of gas collected is significantly lower than the theoretical volume calculated from the current passed, you likely have a gas leak in your setup or are producing liquid products instead.
+
 ---
 
 ## 5. Calculating Performance
@@ -200,7 +206,7 @@ $$ FE = \frac{n \times z \times F}{Q} \times 100 $$
 
 | Product | Chemical Formula | Electrons Required ($z$) | Phase |
 | :--- | :--- | :---: | :--- |
-| **Hydrogen** | $H_2$ | **2** | Gas |
+| **Hydrogen** | $H_2$ (waste) | **2** | Gas |
 | **Carbon Monoxide** | $CO$ | **2** | Gas |
 | **Formate** | $HCOO^-$ | **2** | Liquid |
 | **Methane** | $CH_4$ | **8** | Gas |
@@ -215,47 +221,36 @@ If you ran 100 Coulombs of charge ($Q$) and produced a small amount of Methane, 
 
 ---
 
-### 5.2 Case Study: A Real Calculation Walkthrough
-Let's look at a hypothetical experiment to see how we go from raw numbers to a final percentage.
+### 5.2 Case Study
+Let's walk through a standard research scenario where we analyze the Efficiency and the Activity.
 
-#### The Scenario
-You are testing a Silver (Ag) catalyst to produce Carbon Monoxide (CO). You run the experiment for 30 minutes.
+**The Scenario:**
+*   **Total Current ($I_{total}$):** 10 mA ($0.01 A$)
+*   **Electrode Area:** 2 cm²
+*   **CO2 Flow Rate:** 10 sccm (mL/min)
+*   **GC Detection:** 2000 ppm of CO
 
-#### Step 1: Gather the Raw Data
-Here is what you measured in the lab:
-*   **Average Current ($I$):** 50 mA (milliamps)
-*   **Time ($t$):** 1800 seconds (30 mins)
-*   **Electrode Area ($A$):** 2.5 $cm^2$
-*   **Product Detected ($n$):** The GC tells you that you made 150 micromoles ($\mu mol$) of CO gas.
+**Step 1: Convert Gas Flow to Molar Rate**
+First, determine the total moles of gas flowing per second.
+$$ \text{Flow (mol/s)} = \frac{\text{Flow (mL/min)}}{60 \times V_m} $$
+*(Assuming $V_m = 24465$ mL/mol)*
+$$ \text{Flow} = \frac{10}{60 \times 24465} \approx 6.81 \times 10^{-6} \text{ mol/s} $$
 
-#### Step 2: Calculate Activity (Current Density)
-First, we normalize the current to see how fast the reaction ran per unit area.
-$$ j = \frac{I}{A} = \frac{50 \ mA}{2.5 \ cm^2} = \mathbf{20 \ mA/cm^2} $$
-*Result:* This is a decent reaction rate for a student setup.
+**Step 2: Calculate Partial Current ($I_{CO}$)**
+Determine how much current was specifically used to make CO ($z=2$ electrons).
+$$ I_{CO} = z \times F \times (\text{Flow}_{mol/s} \times \text{Concentration}_{fraction}) $$
+$$ I_{CO} = 2 \times 96485 \times (6.81 \times 10^{-6} \times 0.002) $$
+$$ I_{CO} \approx 0.0026 \text{ A} = 2.6 \text{ mA} $$
 
-#### Step 3: Calculate Selectivity (Faradaic Efficiency)
-Now, we find out what percentage of the electricity actually made the CO.
+**Step 3: Calculate Faradaic Efficiency (FE)**
+$$ FE_{CO} = \frac{I_{CO}}{I_{total}} \times 100\% $$
+$$ FE_{CO} = \frac{2.6 \text{ mA}}{10 \text{ mA}} \times 100\% = \mathbf{26\%} $$
 
-**A. Calculate Total Electrical Charge ($Q_{total}$)**
-Convert mA to Amps first.
-$$ Q = I \times t = 0.050 \ A \times 1800 \ s = \mathbf{90 \ Coulombs} $$
+**Step 4: Calculate Current Density ($j$)**
+$$ j_{total} = \frac{I_{total}}{\text{Area}} = \frac{10 \text{ mA}}{2 \text{ cm}^2} = \mathbf{5 \text{ mA/cm}^2} $$
 
-**B. Calculate Chemical Charge ($Q_{product}$)**
-How much charge is "stored" in the CO?
-*   Target: CO
-*   Electrons required ($z$): 2 (from the Table earlier)
-*   Moles ($n$): $150 \mu mol = 0.000150 \ mol$
-*   Faraday ($F$): $96,485 \ C/mol$
-
-$$ Q_{product} = n \times z \times F $$
-$$ Q_{product} = 0.000150 \times 2 \times 96,485 = \mathbf{28.95 \ Coulombs} $$
-
-**C. The Final Ratio**
-$$ FE = \frac{Q_{product}}{Q_{total}} \times 100 $$
-$$ FE = \frac{28.95}{90} \times 100 = \mathbf{32.1\%} $$
-
-#### The Interpretation
-You have 32% Faradaic Efficiency for CO. And since Silver mostly makes CO and Hydrogen, the remaining 68% of the electrons likely went into making Hydrogen gas.
+**Interpretation:**
+Your system is operating at 5 mA/cm² with 26% efficiency for CO. The remaining 74% went into other products (like Hydrogen) or was lost to resistance.
 
 ![Product Selectivity](./assets/images/fe_vs_voltage.png)
 *Figure : The "Kuhl Plot." This stacked chart shows how product selectivity changes as you increase voltage. Notice how Hydrogen (Grey) decreases as Methane (Blue) increases.*
