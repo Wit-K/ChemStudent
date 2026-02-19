@@ -82,40 +82,49 @@ Before diving into the experiment, you must establish a strict routine for when 
 ---
 
 ## 3. Electrical Data
-Countless of numbers collected from the instrument don't tell us the whole story; we need to connect the dots and interpret the whole reaction. To understand how a catalyst behaves, we plot current, voltage and time.
+Countless of numbers collected from the instrument don't tell us the whole story; we need to connect the dots and interpret the whole reaction. To understand how a catalyst behaves, we plot current, voltage and time. These data are collected via the potentiostat which connects to your system. By altering the program in the potentiostat, you can apply voltage and acquire data in diffrent patterns. The three main techniques are:
 
-### 3.1 The Sweep Techniques: LSV and CV
-These are the first experiments you run to see if your catalyst is working. You vary the voltage and measure the current output.
+### 3.1 Linear Sweep Voltammetry (LSV)
 
-**1. Linear Sweep Voltammetry (LSV)**
-*   **The Action:** The potentiostat scans the voltage in one direction (e.g., from 0V down to -2.0V).
-*   **The Result:** A graph where the current stays near zero until a specific voltage, then drastically shoots down. This is because a reaction has its own specific minimum for the reaction to proceed.
-*   **Onset Potential:** This is the voltage where the current starts to rise meaning the reaction turns on. A more positive onset potential is better as it can be inferred the reaction needs less energy to start. (Note that positive is less energy as we are considering the reduction reaction where we look at negative potentials)
+LSV is the standard method to determine how fast your reaction is occurring and at what voltage it begins.
+
+*   **Concept:** The potentiostat scans the voltage from a starting point (e.g., 0V) to an end point (e.g., -1.5V) in a single direction. As the voltage becomes more negative, the current should increase, indicating that the reduction reaction is happening faster.
+*   **Insight:** We plot this as Current Density (j) on the Y-axis against Voltage (V) on the X-axis. This normalizes the result so you can compare a small wire electrode to a large plate electrode fairly.
+
+#### Interpretation
+1.  **Onset Potential:** Look at the specific voltage where the current starts to drop sharply. A less negative onset potential is better. For example, if Catalyst A starts reacting at -0.5V and Catalyst B starts at -0.8V, Catalyst A is more energy efficient.
+2.  **Argon vs. CO2 Baseline:** To prove your catalyst is actually reducing CO2 and not just splitting water, you should run one LSV in an inert gas like Argon or Nitrogen first. Then, run a second LSV in CO2. If the CO2 line shows significantly more current than the Argon line, your catalyst is active for CO2 reduction.
 
 ![LSV Graph](./assets/images/lsv_graph.png)
 *Figure : A Linear Sweep Voltammetry (LSV) scan. The "knee" of the curve indicates where the reaction turns on.*
 
-**2. Cyclic Voltammetry (CV)**
-*   **The Action:** The potentiostat scans the voltage down and then back up in a loop (0V $\rightarrow$ -2.0V $\rightarrow$ 0V).
-*   **The Result:** A graph in which the shape of the loop acts like a fingerprint for your electrode's surface. The important thing is consistency: if the loops look the same cycle after cycle, your system is stable.
+---
 
-*   **The Difference:** While LSV just shows performance, CV is a diagnostic tool. The shape tells you about the capacitance (surface area) and reversibility. If the graph looks totally different in a few loop, the catalyst might be unstable. This is why in research, they often run the loop many times to ensure stability and reproducibility.
+### 3.2 Cyclic Voltammetry (CV)
 
-So while CV offer more data to interpret, LSV maybe suited to some experiment such as experiment focusing on steady state behavior.
+CV is used to diagnose the health and surface properties of your electrode. Unlike LSV, this method cycles the voltage back and forth multiple times. 
+
+*   **Concept:** The voltage is scanned down to a negative limit and then immediately scanned back up to the start. This creates a loop on the graph. The shape of this loop acts as a fingerprint for your electrode's surface state.
+*   **Insight:** We use CV to check for stability. By running the cycle multiple times (e.g., 50 cycles), we can see if the electrode is degrading or changing over time.
+
+#### Interpretation
+1.  **Stability Check:** Compare the loop of the 1st cycle with the loop of the 50th cycle. Ideally, they should overlap perfectly. If the loops are shrinking or shifting position, it means your catalyst is unstable, falling off the electrode, or getting poisoned by contaminants.
+2.  **Double Layer Capacitance:** Look at the width or thickness of the loop in the middle region where it is relatively flat. A wider loop generally indicates a higher electrochemical surface area. This suggests your electrode has a rougher surface, which often provides more active sites for the reaction to take place.
 
 ![CV Graph](./assets/images/Cyclic.png)
 *Figure : A Cyclic Voltammetry (CV) scan vs Ag/AgCl.*
 
-### 3.2. Chronoamperometry (CA)
-LSV and CV only last a few seconds. To measure products, you need to run the reaction for a longer period.
+### 3.3 Chronoamperometry (CA)
 
-*   **The Action:** Hold the voltage constant (e.g. -1.0V) and record current over time.
-*   **The Graph:**
-    *   **X-Axis:** Time (Seconds)
-    *   **Y-Axis:** Current Density ($mA/cm^2$)
-*   **Interpretation:**
-    *   **Flat Line:** Stable catalyst.
-    *   **Declining Line:** The catalyst is unstable (e.g. being poisoned or falling off).
+CA is the endurance test for your system. While LSV tells you how fast the reaction can go, CA tells you if it can keep going.
+
+*   **Concept:** Instead of scanning the voltage, we hold the potential constant at a specific value (e.g., -1.0 V vs RHE) and measure the current over a long period, typically 1 to 12 hours.
+*   **Insight:** This is the phase where you actually collect your products. By integrating the current over time, you calculate the Total Charge (Q), which serves as the baseline for your Faradaic Efficiency calculations.
+
+#### Interpretation
+**Current Stability:** Look at the general trend of the line over the duration of the experiment.
+    *   **Ideal:** A flat, horizontal line. This means your electrode is stable and performing consistently.
+    *   **Degrading:** A line that slowly curves upwards towards zero (current magnitude decreases). This usually indicates your catalyst is peeling off, dissolving, or being poisoned by contaminants in the electrolyte.
 
 ---
 
@@ -221,37 +230,69 @@ If you ran 100 Coulombs of charge ($Q$) and produced a small amount of Methane, 
 
 ---
 
-### 5.2 Case Study
-Let's walk through a standard research scenario where we analyze the Efficiency and the Activity.
+### 5.2 Comprehensive Case Study
+
+Let's walk through an experiment where we calculate both efficiency and selectivity from the data.
 
 **The Scenario:**
-*   **Total Current ($I_{total}$):** 10 mA ($0.01 A$)
+*   **Total Current ($I_{total}$):** 10 mA ($0.010 A$)
+*   **Duration ($t$):** 1 hour ($3600 s$)
 *   **Electrode Area:** 2 cm²
+*   **Electrolyte Volume ($V_{liq}$):** 30 mL ($0.030 L$)
 *   **CO2 Flow Rate:** 10 sccm (mL/min)
-*   **GC Detection:** 2000 ppm of CO
+*   **Gas Reading (GC):** 2000 ppm Carbon Monoxide (CO)
+*   **Liquid Reading (NMR/HPLC):** 3 mM Formate
 
-**Step 1: Convert Gas Flow to Molar Rate**
-First, determine the total moles of gas flowing per second.
-$$ \text{Flow (mol/s)} = \frac{\text{Flow (mL/min)}}{60 \times V_m} $$
-*(Assuming $V_m = 24465$ mL/mol)*
-$$ \text{Flow} = \frac{10}{60 \times 24465} \approx 6.81 \times 10^{-6} \text{ mol/s} $$
+---
 
-**Step 2: Calculate Partial Current ($I_{CO}$)**
-Determine how much current was specifically used to make CO ($z=2$ electrons).
-$$ I_{CO} = z \times F \times (\text{Flow}_{mol/s} \times \text{Concentration}_{fraction}) $$
+#### Part A: Gas Product Calculation
+Gas is analyzed as a rate of production. We calculate this using the current at the specific moment of sampling.
+
+**1. Convert Gas Flow to Molar Rate**
+$$ \text{Flow}_{mol} = \frac{\text{Flow}_{mL/min}}{60 \times V_m} $$
+*(Using $V_m = 24465$ mL/mol at 25°C)*
+$$ \text{Flow}_{mol} = \frac{10}{60 \times 24465} \approx 6.81 \times 10^{-6} \text{ mol/s} $$
+
+**2. Calculate Partial Current for CO ($I_{CO}$)**
+CO requires 2 electrons ($z=2$).
+$$ I_{CO} = z \times F \times (\text{Flow}_{mol} \times \text{Concentration}_{fraction}) $$
 $$ I_{CO} = 2 \times 96485 \times (6.81 \times 10^{-6} \times 0.002) $$
 $$ I_{CO} \approx 0.0026 \text{ A} = 2.6 \text{ mA} $$
 
-**Step 3: Calculate Faradaic Efficiency (FE)**
-$$ FE_{CO} = \frac{I_{CO}}{I_{total}} \times 100\% $$
-$$ FE_{CO} = \frac{2.6 \text{ mA}}{10 \text{ mA}} \times 100\% = \mathbf{26\%} $$
+**3. Calculate Gas Efficiency**
+$$ FE_{CO} = \frac{2.6 \text{ mA}}{10 \text{ mA}} \times 100\% = 26\% $$
 
-**Step 4: Calculate Current Density ($j$)**
-$$ j_{total} = \frac{I_{total}}{\text{Area}} = \frac{10 \text{ mA}}{2 \text{ cm}^2} = \mathbf{5 \text{ mA/cm}^2} $$
+---
 
-**Interpretation:**
-Your system is operating at 5 mA/cm² with 26% efficiency for CO. The remaining 74% went into other products (like Hydrogen) or was lost to resistance.
+#### Part B: Liquid Product Calculation (Accumulated)
+Liquid products accumulate over time. We calculate this using the total charge passed over the entire hour.
 
+**1. Calculate Total Moles Produced**
+$$ n_{formate} = \text{Concentration} \times \text{Volume} $$
+$$ n_{formate} = 0.003 \text{ mol/L} \times 0.030 \text{ L} = 9.0 \times 10^{-5} \text{ mol} $$
+
+**2. Calculate Charge Used for Formate ($Q_{formate}$)**
+Formate requires 2 electrons ($z=2$).
+$$ Q_{formate} = n \times z \times F $$
+$$ Q_{formate} = (9.0 \times 10^{-5}) \times 2 \times 96485 \approx 17.4 \text{ C} $$
+
+**3. Calculate Total Charge Passed ($Q_{total}$)**
+$$ Q_{total} = I_{total} \times t $$
+$$ Q_{total} = 0.010 \text{ A} \times 3600 \text{ s} = 36.0 \text{ C} $$
+
+**4. Calculate Liquid Efficiency**
+$$ FE_{formate} = \frac{17.4 \text{ C}}{36.0 \text{ C}} \times 100\% \approx 48.3\% $$
+
+---
+
+#### Part C: Overall System Performance
+To report your final results, you combine the efficiencies and normalize the current.
+
+*   **Faradaic Efficiency:** $26\% (CO) and 48.3\% (Formate)
+    *(The remaining ~25.7% is likely Hydrogen evolution or resistive loss).*
+*   **Current Density ($j$):**
+    $$ j = \frac{I_{total}}{\text{Area}} = \frac{10 \text{ mA}}{2 \text{ cm}^2} = 5 \text{ mA/cm}^2 $$
+    
 ![Product Selectivity](./assets/images/fe_vs_voltage.png)
 *Figure : The "Kuhl Plot." This stacked chart shows how product selectivity changes as you increase voltage. Notice how Hydrogen (Grey) decreases as Methane (Blue) increases.*
 
